@@ -1,0 +1,16 @@
+<h1>URL Shortener</h1>
+<% if @error %>
+  <p><%= @error %></p>
+<% end %>
+<form action="/urls" method="post">
+  <input type="text" name="original_url" placeholder="Enter your URL here">
+  <input type="submit" value="Shorten URL">
+</form>
+<ul>
+  <% @urls&.each do |url| %>
+    <li>
+      <a href="/<%= url.short_url %>"><%= url.short_url %></a>
+      (redirects to <%= url.original_url %>, <%= url.clicks %> clicks)
+    </li>
+  <% end %>
+</ul>
