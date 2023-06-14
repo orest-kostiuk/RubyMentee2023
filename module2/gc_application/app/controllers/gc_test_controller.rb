@@ -20,50 +20,40 @@ class GcTestController < ApplicationController
   end
 
   def generate_objects
+    gc_stats = {}
+
     # automatic GC
-    TestObject.reset_instance_count
-    memory_with_enabled_gc, objects_created_enabled_gc = measure_memory_usage_and_objects_created do
-      1_000_000.times { TestObject.new(100) }
-    end
+    gc_stats[:enabled] = perform_test_with_gc_mode(:enabled)
 
     # GC turned off
-    GC.disable
-    TestObject.reset_instance_count
-    memory_with_disabled_gc, objects_created_disabled_gc = measure_memory_usage_and_objects_created do
-      1_000_000.times { TestObject.new(100) }
-    end
-    GC.enable
+    gc_stats[:disabled] = perform_test_with_gc_mode(:disabled)
 
     # GC called on demand
-    GC.disable
-    TestObject.reset_instance_count
-    memory_with_manual_gc, objects_created_manual_gc = measure_memory_usage_and_objects_created do
-      1_000_000.times { TestObject.new(100) }
-      GC.start
-    end
-    GC.enable
+    gc_stats[:manual] = perform_test_with_gc_mode(:manual)
 
-    render json: {
-      memory_with_enabled_gc: memory_with_enabled_gc,
-      objects_created_enabled_gc: objects_created_enabled_gc,
-      memory_with_disabled_gc: memory_with_disabled_gc,
-      objects_created_disabled_gc: objects_created_disabled_gc,
-      memory_with_manual_gc: memory_with_manual_gc,
-      objects_created_manual_gc: objects_created_manual_gc
-    }
+    render json: gc_stats
   end
 
   private
 
-  def measure_memory_usage
-    GetProcessMem.new.bytes
-  end
-
-  def measure_memory_usage_and_objects_created
+  def perform_test_with_gc_mode(gc_mode)
+    TestObject.reset_instance_count
     initial_memory = measure_memory_usage
     initial_objects_count = TestObject.instance_count
 
-    yield
+    case gc_mode
+    when :enabled
+      1_000_000.times { TestObject.new(100) }
+    when :disabled
+      GC.disable
+      1_000_000.times { TestObject.new(100) }
+      GC.enable
+    when :manual
+      GC.disable
+      1_000_000.times { TestObject.new(100) }
+      GC.start
+      GC.enable
+    end
 
     final_memory = measure_memory_usage
     final_objects_count = TestObject.instance_count
@@ -71,6 +61,10 @@ class GcTestController < ApplicationController
     memory_diff = final_memory - initial_memory
     objects_created = final_objects_count - initial_objects_count
 
-    [memory_diff, objects_created]
+    { memory_diff: memory_diff, objects_created: objects_created }
+  end
+
+  def measure_memory_usage
+    GetProcessMem.new.bytes
   end
 end
