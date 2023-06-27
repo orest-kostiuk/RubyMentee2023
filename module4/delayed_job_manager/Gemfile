@@ -1,0 +1,16 @@
+source "https://rubygems.org"
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+
+# Specify your gem's dependencies in delayed_job_manager.gemspec.
+gemspec
+
+gem "puma"
+
+gem "sqlite3"
+
+gem "sprockets-rails"
+gem 'delayed_job_active_record'
+gem 'bootstrap', '~> 5.0'
+gem 'pry'
+# Start debugger with binding.b [https://github.com/ruby/debug]
+# gem "debug", ">= 1.0.0"
