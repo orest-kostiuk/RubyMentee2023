@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<script data-cfasync="false" data-no-defer="1" data-no-minify="1" data-no-optimize="1">var ewww_webp_supported=!1;function check_webp_feature(A,e){var w;e=void 0!==e?e:function(){},ewww_webp_supported?e(ewww_webp_supported):((w=new Image).onload=function(){ewww_webp_supported=0<w.width&&0<w.height,e&&e(ewww_webp_supported)},w.onerror=function(){e&&e(!1)},w.src="data:image/webp;base64,"+{alpha:"UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA=="}[A])}check_webp_feature("alpha");</script><script data-cfasync="false" data-no-defer="1" data-no-minify="1" data-no-optimize="1">var Arrive=function(c,w){"use strict";if(c.MutationObserver&&"undefined"!=typeof HTMLElement){var r,a=0,u=(r=HTMLElement.prototype.matches||HTMLElement.prototype.webkitMatchesSelector||HTMLElement.prototype.mozMatchesSelector||HTMLElement.prototype.msMatchesSelector,{matchesSelector:function(e,t){return e instanceof HTMLElement&&r.call(e,t)},addMethod:function(e,t,r){var a=e[t];e[t]=function(){return r.length==arguments.length?r.apply(this,arguments):"function"==typeof a?a.apply(this,arguments):void 0}},callCallbacks:function(e,t){t&&t.options.onceOnly&&1==t.firedElems.length&&(e=[e[0]]);for(var r,a=0;r=e[a];a++)r&&r.callback&&r.callback.call(r.elem,r.elem);t&&t.options.onceOnly&&1==t.firedElems.length&&t.me.unbindEventWithSelectorAndCallback.call(t.target,t.selector,t.callback)},checkChildNodesRecursively:function(e,t,r,a){for(var i,n=0;i=e[n];n++)r(i,t,a)&&a.push({callback:t.callback,elem:i}),0<i.childNodes.length&&u.checkChildNodesRecursively(i.childNodes,t,r,a)},mergeArrays:function(e,t){var r,a={};for(r in e)e.hasOwnProperty(r)&&(a[r]=e[r]);for(r in t)t.hasOwnProperty(r)&&(a[r]=t[r]);return a},toElementsArray:function(e){return e=void 0!==e&&("number"!=typeof e.length||e===c)?[e]:e}}),e=(l.prototype.addEvent=function(e,t,r,a){a={target:e,selector:t,options:r,callback:a,firedElems:[]};return this._beforeAdding&&this._beforeAdding(a),this._eventsBucket.push(a),a},l.prototype.removeEvent=function(e){for(var t,r=this._eventsBucket.length-1;t=this._eventsBucket[r];r--)e(t)&&(this._beforeRemoving&&this._beforeRemoving(t),(t=this._eventsBucket.splice(r,1))&&t.length&&(t[0].callback=null))},l.prototype.beforeAdding=function(e){this._beforeAdding=e},l.prototype.beforeRemoving=function(e){this._beforeRemoving=e},l),t=function(i,n){var o=new e,l=this,s={fireOnAttributesModification:!1};return o.beforeAdding(function(t){var e=t.target;e!==c.document&&e!==c||(e=document.getElementsByTagName("html")[0]);var r=new MutationObserver(function(e){n.call(this,e,t)}),a=i(t.options);r.observe(e,a),t.observer=r,t.me=l}),o.beforeRemoving(function(e){e.observer.disconnect()}),this.bindEvent=function(e,t,r){t=u.mergeArrays(s,t);for(var a=u.toElementsArray(this),i=0;i<a.length;i++)o.addEvent(a[i],e,t,r)},this.unbindEvent=function(){var r=u.toElementsArray(this);o.removeEvent(function(e){for(var t=0;t<r.length;t++)if(this===w||e.target===r[t])return!0;return!1})},this.unbindEventWithSelectorOrCallback=function(r){var a=u.toElementsArray(this),i=r,e="function"==typeof r?function(e){for(var t=0;t<a.length;t++)if((this===w||e.target===a[t])&&e.callback===i)return!0;return!1}:function(e){for(var t=0;t<a.length;t++)if((this===w||e.target===a[t])&&e.selector===r)return!0;return!1};o.removeEvent(e)},this.unbindEventWithSelectorAndCallback=function(r,a){var i=u.toElementsArray(this);o.removeEvent(function(e){for(var t=0;t<i.length;t++)if((this===w||e.target===i[t])&&e.selector===r&&e.callback===a)return!0;return!1})},this},i=new function(){var s={fireOnAttributesModification:!1,onceOnly:!1,existing:!1};function n(e,t,r){return!(!u.matchesSelector(e,t.selector)||(e._id===w&&(e._id=a++),-1!=t.firedElems.indexOf(e._id)))&&(t.firedElems.push(e._id),!0)}var c=(i=new t(function(e){var t={attributes:!1,childList:!0,subtree:!0};return e.fireOnAttributesModification&&(t.attributes=!0),t},function(e,i){e.forEach(function(e){var t=e.addedNodes,r=e.target,a=[];null!==t&&0<t.length?u.checkChildNodesRecursively(t,i,n,a):"attributes"===e.type&&n(r,i)&&a.push({callback:i.callback,elem:r}),u.callCallbacks(a,i)})})).bindEvent;return i.bindEvent=function(e,t,r){t=void 0===r?(r=t,s):u.mergeArrays(s,t);var a=u.toElementsArray(this);if(t.existing){for(var i=[],n=0;n<a.length;n++)for(var o=a[n].querySelectorAll(e),l=0;l<o.length;l++)i.push({callback:r,elem:o[l]});if(t.onceOnly&&i.length)return r.call(i[0].elem,i[0].elem);setTimeout(u.callCallbacks,1,i)}c.call(this,e,t,r)},i},o=new function(){var a={};function i(e,t){return u.matchesSelector(e,t.selector)}var n=(o=new t(function(){return{childList:!0,subtree:!0}},function(e,r){e.forEach(function(e){var t=e.removedNodes,e=[];null!==t&&0<t.length&&u.checkChildNodesRecursively(t,r,i,e),u.callCallbacks(e,r)})})).bindEvent;return o.bindEvent=function(e,t,r){t=void 0===r?(r=t,a):u.mergeArrays(a,t),n.call(this,e,t,r)},o};d(HTMLElement.prototype),d(NodeList.prototype),d(HTMLCollection.prototype),d(HTMLDocument.prototype),d(Window.prototype);var n={};return s(i,n,"unbindAllArrive"),s(o,n,"unbindAllLeave"),n}function l(){this._eventsBucket=[],this._beforeAdding=null,this._beforeRemoving=null}function s(e,t,r){u.addMethod(t,r,e.unbindEvent),u.addMethod(t,r,e.unbindEventWithSelectorOrCallback),u.addMethod(t,r,e.unbindEventWithSelectorAndCallback)}function d(e){e.arrive=i.bindEvent,s(i,e,"unbindArrive"),e.leave=o.bindEvent,s(o,e,"unbindLeave")}}(window,void 0),ewww_webp_supported=!1;function check_webp_feature(e,t){var r;ewww_webp_supported?t(ewww_webp_supported):((r=new Image).onload=function(){ewww_webp_supported=0<r.width&&0<r.height,t(ewww_webp_supported)},r.onerror=function(){t(!1)},r.src="data:image/webp;base64,"+{alpha:"UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA==",animation:"UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA"}[e])}function ewwwLoadImages(e){if(e){for(var t=document.querySelectorAll(".batch-image img, .image-wrapper a, .ngg-pro-masonry-item a, .ngg-galleria-offscreen-seo-wrapper a"),r=0,a=t.length;r<a;r++)ewwwAttr(t[r],"data-src",t[r].getAttribute("data-webp")),ewwwAttr(t[r],"data-thumbnail",t[r].getAttribute("data-webp-thumbnail"));for(var i=document.querySelectorAll(".rev_slider ul li"),r=0,a=i.length;r<a;r++){ewwwAttr(i[r],"data-thumb",i[r].getAttribute("data-webp-thumb"));for(var n=1;n<11;)ewwwAttr(i[r],"data-param"+n,i[r].getAttribute("data-webp-param"+n)),n++}for(r=0,a=(i=document.querySelectorAll(".rev_slider img")).length;r<a;r++)ewwwAttr(i[r],"data-lazyload",i[r].getAttribute("data-webp-lazyload"));for(var o=document.querySelectorAll("div.woocommerce-product-gallery__image"),r=0,a=o.length;r<a;r++)ewwwAttr(o[r],"data-thumb",o[r].getAttribute("data-webp-thumb"))}for(var l=document.querySelectorAll("video"),r=0,a=l.length;r<a;r++)ewwwAttr(l[r],"poster",e?l[r].getAttribute("data-poster-webp"):l[r].getAttribute("data-poster-image"));for(var s,c=document.querySelectorAll("img.ewww_webp_lazy_load"),r=0,a=c.length;r<a;r++)e&&(ewwwAttr(c[r],"data-lazy-srcset",c[r].getAttribute("data-lazy-srcset-webp")),ewwwAttr(c[r],"data-srcset",c[r].getAttribute("data-srcset-webp")),ewwwAttr(c[r],"data-lazy-src",c[r].getAttribute("data-lazy-src-webp")),ewwwAttr(c[r],"data-src",c[r].getAttribute("data-src-webp")),ewwwAttr(c[r],"data-orig-file",c[r].getAttribute("data-webp-orig-file")),ewwwAttr(c[r],"data-medium-file",c[r].getAttribute("data-webp-medium-file")),ewwwAttr(c[r],"data-large-file",c[r].getAttribute("data-webp-large-file")),null!=(s=c[r].getAttribute("srcset"))&&!1!==s&&s.includes("R0lGOD")&&ewwwAttr(c[r],"src",c[r].getAttribute("data-lazy-src-webp"))),c[r].className=c[r].className.replace(/\bewww_webp_lazy_load\b/,"");for(var w=document.querySelectorAll(".ewww_webp"),r=0,a=w.length;r<a;r++)e?(ewwwAttr(w[r],"srcset",w[r].getAttribute("data-srcset-webp")),ewwwAttr(w[r],"src",w[r].getAttribute("data-src-webp")),ewwwAttr(w[r],"data-orig-file",w[r].getAttribute("data-webp-orig-file")),ewwwAttr(w[r],"data-medium-file",w[r].getAttribute("data-webp-medium-file")),ewwwAttr(w[r],"data-large-file",w[r].getAttribute("data-webp-large-file")),ewwwAttr(w[r],"data-large_image",w[r].getAttribute("data-webp-large_image")),ewwwAttr(w[r],"data-src",w[r].getAttribute("data-webp-src"))):(ewwwAttr(w[r],"srcset",w[r].getAttribute("data-srcset-img")),ewwwAttr(w[r],"src",w[r].getAttribute("data-src-img"))),w[r].className=w[r].className.replace(/\bewww_webp\b/,"ewww_webp_loaded");window.jQuery&&jQuery.fn.isotope&&jQuery.fn.imagesLoaded&&(jQuery(".fusion-posts-container-infinite").imagesLoaded(function(){jQuery(".fusion-posts-container-infinite").hasClass("isotope")&&jQuery(".fusion-posts-container-infinite").isotope()}),jQuery(".fusion-portfolio:not(.fusion-recent-works) .fusion-portfolio-wrapper").imagesLoaded(function(){jQuery(".fusion-portfolio:not(.fusion-recent-works) .fusion-portfolio-wrapper").isotope()}))}function ewwwWebPInit(e){ewwwLoadImages(e),ewwwNggLoadGalleries(e),document.arrive(".ewww_webp",function(){ewwwLoadImages(e)}),document.arrive(".ewww_webp_lazy_load",function(){ewwwLoadImages(e)}),document.arrive("videos",function(){ewwwLoadImages(e)}),"loading"==document.readyState?document.addEventListener("DOMContentLoaded",ewwwJSONParserInit):("undefined"!=typeof galleries&&ewwwNggParseGalleries(e),ewwwWooParseVariations(e))}function ewwwAttr(e,t,r){null!=r&&!1!==r&&e.setAttribute(t,r)}function ewwwJSONParserInit(){"undefined"!=typeof galleries&&check_webp_feature("alpha",ewwwNggParseGalleries),check_webp_feature("alpha",ewwwWooParseVariations)}function ewwwWooParseVariations(e){if(e)for(var t=document.querySelectorAll("form.variations_form"),r=0,a=t.length;r<a;r++){var i=t[r].getAttribute("data-product_variations"),n=!1;try{for(var o in i=JSON.parse(i))void 0!==i[o]&&void 0!==i[o].image&&(void 0!==i[o].image.src_webp&&(i[o].image.src=i[o].image.src_webp,n=!0),void 0!==i[o].image.srcset_webp&&(i[o].image.srcset=i[o].image.srcset_webp,n=!0),void 0!==i[o].image.full_src_webp&&(i[o].image.full_src=i[o].image.full_src_webp,n=!0),void 0!==i[o].image.gallery_thumbnail_src_webp&&(i[o].image.gallery_thumbnail_src=i[o].image.gallery_thumbnail_src_webp,n=!0),void 0!==i[o].image.thumb_src_webp&&(i[o].image.thumb_src=i[o].image.thumb_src_webp,n=!0));n&&ewwwAttr(t[r],"data-product_variations",JSON.stringify(i))}catch(e){}}}function ewwwNggParseGalleries(e){if(e)for(var t in galleries){var r=galleries[t];galleries[t].images_list=ewwwNggParseImageList(r.images_list)}}function ewwwNggLoadGalleries(e){e&&document.addEventListener("ngg.galleria.themeadded",function(e,t){window.ngg_galleria._create_backup=window.ngg_galleria.create,window.ngg_galleria.create=function(e,t){var r=$(e).data("id");return galleries["gallery_"+r].images_list=ewwwNggParseImageList(galleries["gallery_"+r].images_list),window.ngg_galleria._create_backup(e,t)}})}function ewwwNggParseImageList(e){for(var t in e){var r=e[t];if(void 0!==r["image-webp"]&&(e[t].image=r["image-webp"],delete e[t]["image-webp"]),void 0!==r["thumb-webp"]&&(e[t].thumb=r["thumb-webp"],delete e[t]["thumb-webp"]),void 0!==r.full_image_webp&&(e[t].full_image=r.full_image_webp,delete e[t].full_image_webp),void 0!==r.srcsets)for(var a in r.srcsets)nggSrcset=r.srcsets[a],void 0!==r.srcsets[a+"-webp"]&&(e[t].srcsets[a]=r.srcsets[a+"-webp"],delete e[t].srcsets[a+"-webp"]);if(void 0!==r.full_srcsets)for(var i in r.full_srcsets)nggFSrcset=r.full_srcsets[i],void 0!==r.full_srcsets[i+"-webp"]&&(e[t].full_srcsets[i]=r.full_srcsets[i+"-webp"],delete e[t].full_srcsets[i+"-webp"])}return e}check_webp_feature("alpha",ewwwWebPInit);</script><meta name='robots' content='noindex, follow' />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- This site is optimized with the Yoast SEO Premium plugin v20.8 (Yoast SEO v20.8) - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Page not found | Emveep</title>
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:title" content="Page not found | Emveep" />
+	<meta property="og:site_name" content="Emveep" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.emveep.com/#website","url":"https://www.emveep.com/","name":"Emveep","description":"Custom Software Development Company","publisher":{"@id":"https://www.emveep.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.emveep.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://www.emveep.com/#organization","name":"Emveep","url":"https://www.emveep.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.emveep.com/#/schema/logo/image/","url":"","contentUrl":"","caption":"Emveep"},"image":{"@id":"https://www.emveep.com/#/schema/logo/image/"}}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link href='https://fonts.googleapis.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Emveep &raquo; Feed" href="https://www.emveep.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Emveep &raquo; Comments Feed" href="https://www.emveep.com/comments/feed/" />
+<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='structured-content-frontend-css' href='https://www.emveep.com/wp-content/plugins/structured-content/dist/blocks.style.build.css?ver=1.5.3' media='all' />
+<link rel='stylesheet' id='formidable-css' href='https://www.emveep.com/wp-content/plugins/formidable/css/formidableforms.css?ver=531920' media='all' />
+<link rel='stylesheet' id='bdt-uikit-css' href='https://www.emveep.com/wp-content/plugins/bdthemes-element-pack/assets/css/bdt-uikit.css?ver=3.15.1' media='all' />
+<link rel='stylesheet' id='ep-helper-css' href='https://www.emveep.com/wp-content/plugins/bdthemes-element-pack/assets/css/ep-helper.css?ver=6.13.0' media='all' />
+<link rel='stylesheet' id='premium-addons-css' href='https://www.emveep.com/wp-content/plugins/premium-addons-for-elementor/assets/frontend/min-css/premium-addons.min.css?ver=4.9.57' media='all' />
+<link rel='stylesheet' id='dce-dynamic-visibility-style-css' href='https://www.emveep.com/wp-content/plugins/dynamic-visibility-for-elementor//assets/css/dynamic-visibility.css?ver=5.0.6' media='all' />
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.emveep.com/wp-includes/css/dist/block-library/style.min.css?ver=6.2' media='all' />
+<link rel='stylesheet' id='classic-theme-styles-css' href='https://www.emveep.com/wp-includes/css/classic-themes.min.css?ver=6.2' media='all' />
+<style id='global-styles-inline-css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--contrast: var(--contrast);--wp--preset--color--contrast-2: var(--contrast-2);--wp--preset--color--contrast-3: var(--contrast-3);--wp--preset--color--base: var(--base);--wp--preset--color--base-2: var(--base-2);--wp--preset--color--base-3: var(--base-3);--wp--preset--color--accent: var(--accent);--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='generate-widget-areas-css' href='https://www.emveep.com/wp-content/themes/generatepress/assets/css/components/widget-areas.min.css?ver=3.3.0' media='all' />
+<link rel='stylesheet' id='generate-style-css' href='https://www.emveep.com/wp-content/themes/generatepress/assets/css/main.min.css?ver=3.3.0' media='all' />
+<style id='generate-style-inline-css'>
+body{background-color:#000000;color:var(--contrast);}a{color:var(--accent);}a:hover, a:focus, a:active{color:var(--contrast);}.grid-container{max-width:1440px;}.wp-block-group__inner-container{max-width:1440px;margin-left:auto;margin-right:auto;}:root{--contrast:#222222;--contrast-2:#575760;--contrast-3:#b2b2be;--base:#f0f0f0;--base-2:#f7f8f9;--base-3:#ffffff;--accent:#1e73be;}:root .has-contrast-color{color:var(--contrast);}:root .has-contrast-background-color{background-color:var(--contrast);}:root .has-contrast-2-color{color:var(--contrast-2);}:root .has-contrast-2-background-color{background-color:var(--contrast-2);}:root .has-contrast-3-color{color:var(--contrast-3);}:root .has-contrast-3-background-color{background-color:var(--contrast-3);}:root .has-base-color{color:var(--base);}:root .has-base-background-color{background-color:var(--base);}:root .has-base-2-color{color:var(--base-2);}:root .has-base-2-background-color{background-color:var(--base-2);}:root .has-base-3-color{color:var(--base-3);}:root .has-base-3-background-color{background-color:var(--base-3);}:root .has-accent-color{color:var(--accent);}:root .has-accent-background-color{background-color:var(--accent);}button:not(.menu-toggle),html input[type="button"],input[type="reset"],input[type="submit"],.button,.wp-block-button .wp-block-button__link{font-family:Open Sans, sans-serif;font-size:14px;}@media (max-width: 1024px){button:not(.menu-toggle),html input[type="button"],input[type="reset"],input[type="submit"],.button,.wp-block-button .wp-block-button__link{font-size:12px;}}@media (max-width:768px){button:not(.menu-toggle),html input[type="button"],input[type="reset"],input[type="submit"],.button,.wp-block-button .wp-block-button__link{font-size:14px;}}h1, h2, h3, h4, h5, h6{font-family:Work Sans, sans-serif;}@media (max-width:768px){h1, h2, h3, h4, h5, h6{margin-bottom:0px;}}h1{font-family:Work Sans, sans-serif;font-weight:bold;font-size:55px;}@media (max-width: 1024px){h1{font-size:40px;}}@media (max-width:768px){h1{font-size:30px;letter-spacing:0px;line-height:0em;margin-bottom:0px;}}.main-navigation a, .main-navigation .menu-toggle, .main-navigation .menu-bar-items{font-family:Open Sans, sans-serif;font-weight:600;font-size:14px;}@media (max-width: 1024px){.main-navigation a, .main-navigation .menu-toggle, .main-navigation .menu-bar-items{font-size:12px;}}h3{font-family:Work Sans, sans-serif;font-size:28px;}@media (max-width: 1024px){h3{font-size:16px;}}html{font-family:Open Sans, sans-serif;font-size:14px;}@media (max-width: 1024px){html{font-size:12px;}}body, button, input, select, textarea{font-family:Open Sans, sans-serif;font-size:13px;}@media (max-width: 1024px){body, button, input, select, textarea{font-size:12px;}}.top-bar{background-color:#636363;color:#ffffff;}.top-bar a{color:#ffffff;}.top-bar a:hover{color:#303030;}.site-header{background-color:var(--base-3);}.main-title a,.main-title a:hover{color:var(--contrast);}.site-description{color:var(--contrast-2);}.mobile-menu-control-wrapper .menu-toggle,.mobile-menu-control-wrapper .menu-toggle:hover,.mobile-menu-control-wrapper .menu-toggle:focus,.has-inline-mobile-toggle #site-navigation.toggled{background-color:rgba(0, 0, 0, 0.02);}.main-navigation,.main-navigation ul ul{background-color:var(--base-3);}.main-navigation .main-nav ul li a, .main-navigation .menu-toggle, .main-navigation .menu-bar-items{color:var(--contrast);}.main-navigation .main-nav ul li:not([class*="current-menu-"]):hover > a, .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus > a, .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"]) > a, .main-navigation .menu-bar-item:hover > a, .main-navigation .menu-bar-item.sfHover > a{color:var(--accent);}button.menu-toggle:hover,button.menu-toggle:focus{color:var(--contrast);}.main-navigation .main-nav ul li[class*="current-menu-"] > a{color:var(--accent);}.navigation-search input[type="search"],.navigation-search input[type="search"]:active, .navigation-search input[type="search"]:focus, .main-navigation .main-nav ul li.search-item.active > a, .main-navigation .menu-bar-items .search-item.active > a{color:var(--accent);}.main-navigation ul ul{background-color:var(--base);}.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .one-container .container, .separate-containers .paging-navigation, .inside-page-header{background-color:#f6f6f6;}.entry-title a{color:var(--contrast);}.entry-title a:hover{color:var(--contrast-2);}.entry-meta{color:var(--contrast-2);}.sidebar .widget{background-color:var(--base-3);}.footer-widgets{background-color:var(--base-3);}.site-info{background-color:var(--base-3);}input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="tel"],input[type="number"],textarea,select{color:var(--contrast);background-color:var(--base-2);border-color:var(--base);}input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="tel"]:focus,input[type="number"]:focus,textarea:focus,select:focus{color:var(--contrast);background-color:var(--base-2);border-color:var(--contrast-3);}button,html input[type="button"],input[type="reset"],input[type="submit"],a.button,a.wp-block-button__link:not(.has-background){color:#ffffff;background-color:#55555e;}button:hover,html input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,a.button:hover,button:focus,html input[type="button"]:focus,input[type="reset"]:focus,input[type="submit"]:focus,a.button:focus,a.wp-block-button__link:not(.has-background):active,a.wp-block-button__link:not(.has-background):focus,a.wp-block-button__link:not(.has-background):hover{color:#ffffff;background-color:#3f4047;}a.generate-back-to-top{background-color:rgba( 0,0,0,0.4 );color:#ffffff;}a.generate-back-to-top:hover,a.generate-back-to-top:focus{background-color:rgba( 0,0,0,0.6 );color:#ffffff;}:root{--gp-search-modal-bg-color:var(--base-3);--gp-search-modal-text-color:var(--contrast);--gp-search-modal-overlay-bg-color:rgba(0,0,0,0.2);}@media (max-width:768px){.main-navigation .menu-bar-item:hover > a, .main-navigation .menu-bar-item.sfHover > a{background:none;color:var(--contrast);}}.nav-below-header .main-navigation .inside-navigation.grid-container, .nav-above-header .main-navigation .inside-navigation.grid-container{padding:0px 20px 0px 20px;}.site-main .wp-block-group__inner-container{padding:40px;}.separate-containers .paging-navigation{padding-top:20px;padding-bottom:20px;}.entry-content .alignwide, body:not(.no-sidebar) .entry-content .alignfull{margin-left:-40px;width:calc(100% + 80px);max-width:calc(100% + 80px);}.rtl .menu-item-has-children .dropdown-menu-toggle{padding-left:20px;}.rtl .main-navigation .main-nav ul li.menu-item-has-children > a{padding-right:20px;}@media (max-width:768px){.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .separate-containers .paging-navigation, .one-container .site-content, .inside-page-header{padding:30px;}.site-main .wp-block-group__inner-container{padding:30px;}.inside-top-bar{padding-right:30px;padding-left:30px;}.inside-header{padding-right:30px;padding-left:30px;}.widget-area .widget{padding-top:30px;padding-right:30px;padding-bottom:30px;padding-left:30px;}.footer-widgets-container{padding-top:30px;padding-right:30px;padding-bottom:30px;padding-left:30px;}.inside-site-info{padding-right:30px;padding-left:30px;}.entry-content .alignwide, body:not(.no-sidebar) .entry-content .alignfull{margin-left:-30px;width:calc(100% + 60px);max-width:calc(100% + 60px);}.one-container .site-main .paging-navigation{margin-bottom:20px;}}/* End cached CSS */.is-right-sidebar{width:30%;}.is-left-sidebar{width:30%;}.site-content .content-area{width:70%;}@media (max-width:768px){.main-navigation .menu-toggle,.sidebar-nav-mobile:not(#sticky-placeholder){display:block;}.main-navigation ul,.gen-sidebar-nav,.main-navigation:not(.slideout-navigation):not(.toggled) .main-nav > ul,.has-inline-mobile-toggle #site-navigation .inside-navigation > *:not(.navigation-search):not(.main-nav){display:none;}.nav-align-right .inside-navigation,.nav-align-center .inside-navigation{justify-content:space-between;}.has-inline-mobile-toggle .mobile-menu-control-wrapper{display:flex;flex-wrap:wrap;}.has-inline-mobile-toggle .inside-header{flex-direction:row;text-align:left;flex-wrap:wrap;}.has-inline-mobile-toggle .header-widget,.has-inline-mobile-toggle #site-navigation{flex-basis:100%;}.nav-float-left .has-inline-mobile-toggle #site-navigation{order:10;}}
+.elementor-template-full-width .site-content{display:block;}
+</style>
+<link rel='stylesheet' id='generate-child-css' href='https://www.emveep.com/wp-content/themes/emveep/style.css?ver=1649056026' media='all' />
+<link rel='stylesheet' id='generate-google-fonts-css' href='https://fonts.googleapis.com/css?display=swap&family=Work+Sans%3A100%2C200%2C300%2Cregular%2C500%2C600%2C700%2C800%2C900%2C100italic%2C200italic%2C300italic%2Citalic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7COpen+Sans%3A300%2C300italic%2Cregular%2Citalic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic&#038;display=auto&#038;ver=3.3.0' media='all' />
+<link rel='stylesheet' id='font-awesome-all-css' href='https://www.emveep.com/wp-content/plugins/jet-menu/assets/public/lib/font-awesome/css/all.min.css?ver=5.12.0' media='all' />
+<link rel='stylesheet' id='font-awesome-v4-shims-css' href='https://www.emveep.com/wp-content/plugins/jet-menu/assets/public/lib/font-awesome/css/v4-shims.min.css?ver=5.12.0' media='all' />
+<link rel='stylesheet' id='jet-menu-public-styles-css' href='https://www.emveep.com/wp-content/plugins/jet-menu/assets/public/css/public.css?ver=2.4.0' media='all' />
+<link rel='stylesheet' id='elementor-icons-css' href='https://www.emveep.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.20.0' media='all' />
+<link rel='stylesheet' id='elementor-frontend-legacy-css' href='https://www.emveep.com/wp-content/plugins/elementor/assets/css/frontend-legacy.min.css?ver=3.13.4' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css' href='https://www.emveep.com/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.13.4' media='all' />
+<style id='elementor-frontend-inline-css'>
+@-webkit-keyframes ha_fadeIn{0%{opacity:0}to{opacity:1}}@keyframes ha_fadeIn{0%{opacity:0}to{opacity:1}}@-webkit-keyframes ha_zoomIn{0%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}50%{opacity:1}}@keyframes ha_zoomIn{0%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}50%{opacity:1}}@-webkit-keyframes ha_rollIn{0%{opacity:0;-webkit-transform:translate3d(-100%,0,0) rotate3d(0,0,1,-120deg);transform:translate3d(-100%,0,0) rotate3d(0,0,1,-120deg)}to{opacity:1}}@keyframes ha_rollIn{0%{opacity:0;-webkit-transform:translate3d(-100%,0,0) rotate3d(0,0,1,-120deg);transform:translate3d(-100%,0,0) rotate3d(0,0,1,-120deg)}to{opacity:1}}@-webkit-keyframes ha_bounce{0%,20%,53%,to{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1)}40%,43%{-webkit-transform:translate3d(0,-30px,0) scaleY(1.1);transform:translate3d(0,-30px,0) scaleY(1.1);-webkit-animation-timing-function:cubic-bezier(.755,.05,.855,.06);animation-timing-function:cubic-bezier(.755,.05,.855,.06)}70%{-webkit-transform:translate3d(0,-15px,0) scaleY(1.05);transform:translate3d(0,-15px,0) scaleY(1.05);-webkit-animation-timing-function:cubic-bezier(.755,.05,.855,.06);animation-timing-function:cubic-bezier(.755,.05,.855,.06)}80%{-webkit-transition-timing-function:cubic-bezier(.215,.61,.355,1);transition-timing-function:cubic-bezier(.215,.61,.355,1);-webkit-transform:translate3d(0,0,0) scaleY(.95);transform:translate3d(0,0,0) scaleY(.95)}90%{-webkit-transform:translate3d(0,-4px,0) scaleY(1.02);transform:translate3d(0,-4px,0) scaleY(1.02)}}@keyframes ha_bounce{0%,20%,53%,to{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1)}40%,43%{-webkit-transform:translate3d(0,-30px,0) scaleY(1.1);transform:translate3d(0,-30px,0) scaleY(1.1);-webkit-animation-timing-function:cubic-bezier(.755,.05,.855,.06);animation-timing-function:cubic-bezier(.755,.05,.855,.06)}70%{-webkit-transform:translate3d(0,-15px,0) scaleY(1.05);transform:translate3d(0,-15px,0) scaleY(1.05);-webkit-animation-timing-function:cubic-bezier(.755,.05,.855,.06);animation-timing-function:cubic-bezier(.755,.05,.855,.06)}80%{-webkit-transition-timing-function:cubic-bezier(.215,.61,.355,1);transition-timing-function:cubic-bezier(.215,.61,.355,1);-webkit-transform:translate3d(0,0,0) scaleY(.95);transform:translate3d(0,0,0) scaleY(.95)}90%{-webkit-transform:translate3d(0,-4px,0) scaleY(1.02);transform:translate3d(0,-4px,0) scaleY(1.02)}}@-webkit-keyframes ha_bounceIn{0%,20%,40%,60%,80%,to{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}20%{-webkit-transform:scale3d(1.1,1.1,1.1);transform:scale3d(1.1,1.1,1.1)}40%{-webkit-transform:scale3d(.9,.9,.9);transform:scale3d(.9,.9,.9)}60%{opacity:1;-webkit-transform:scale3d(1.03,1.03,1.03);transform:scale3d(1.03,1.03,1.03)}80%{-webkit-transform:scale3d(.97,.97,.97);transform:scale3d(.97,.97,.97)}to{opacity:1}}@keyframes ha_bounceIn{0%,20%,40%,60%,80%,to{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}20%{-webkit-transform:scale3d(1.1,1.1,1.1);transform:scale3d(1.1,1.1,1.1)}40%{-webkit-transform:scale3d(.9,.9,.9);transform:scale3d(.9,.9,.9)}60%{opacity:1;-webkit-transform:scale3d(1.03,1.03,1.03);transform:scale3d(1.03,1.03,1.03)}80%{-webkit-transform:scale3d(.97,.97,.97);transform:scale3d(.97,.97,.97)}to{opacity:1}}@-webkit-keyframes ha_flipInX{0%{opacity:0;-webkit-transform:perspective(400px) rotate3d(1,0,0,90deg);transform:perspective(400px) rotate3d(1,0,0,90deg);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}40%{-webkit-transform:perspective(400px) rotate3d(1,0,0,-20deg);transform:perspective(400px) rotate3d(1,0,0,-20deg);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}60%{opacity:1;-webkit-transform:perspective(400px) rotate3d(1,0,0,10deg);transform:perspective(400px) rotate3d(1,0,0,10deg)}80%{-webkit-transform:perspective(400px) rotate3d(1,0,0,-5deg);transform:perspective(400px) rotate3d(1,0,0,-5deg)}}@keyframes ha_flipInX{0%{opacity:0;-webkit-transform:perspective(400px) rotate3d(1,0,0,90deg);transform:perspective(400px) rotate3d(1,0,0,90deg);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}40%{-webkit-transform:perspective(400px) rotate3d(1,0,0,-20deg);transform:perspective(400px) rotate3d(1,0,0,-20deg);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}60%{opacity:1;-webkit-transform:perspective(400px) rotate3d(1,0,0,10deg);transform:perspective(400px) rotate3d(1,0,0,10deg)}80%{-webkit-transform:perspective(400px) rotate3d(1,0,0,-5deg);transform:perspective(400px) rotate3d(1,0,0,-5deg)}}@-webkit-keyframes ha_flipInY{0%{opacity:0;-webkit-transform:perspective(400px) rotate3d(0,1,0,90deg);transform:perspective(400px) rotate3d(0,1,0,90deg);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}40%{-webkit-transform:perspective(400px) rotate3d(0,1,0,-20deg);transform:perspective(400px) rotate3d(0,1,0,-20deg);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}60%{opacity:1;-webkit-transform:perspective(400px) rotate3d(0,1,0,10deg);transform:perspective(400px) rotate3d(0,1,0,10deg)}80%{-webkit-transform:perspective(400px) rotate3d(0,1,0,-5deg);transform:perspective(400px) rotate3d(0,1,0,-5deg)}}@keyframes ha_flipInY{0%{opacity:0;-webkit-transform:perspective(400px) rotate3d(0,1,0,90deg);transform:perspective(400px) rotate3d(0,1,0,90deg);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}40%{-webkit-transform:perspective(400px) rotate3d(0,1,0,-20deg);transform:perspective(400px) rotate3d(0,1,0,-20deg);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}60%{opacity:1;-webkit-transform:perspective(400px) rotate3d(0,1,0,10deg);transform:perspective(400px) rotate3d(0,1,0,10deg)}80%{-webkit-transform:perspective(400px) rotate3d(0,1,0,-5deg);transform:perspective(400px) rotate3d(0,1,0,-5deg)}}@-webkit-keyframes ha_swing{20%{-webkit-transform:rotate3d(0,0,1,15deg);transform:rotate3d(0,0,1,15deg)}40%{-webkit-transform:rotate3d(0,0,1,-10deg);transform:rotate3d(0,0,1,-10deg)}60%{-webkit-transform:rotate3d(0,0,1,5deg);transform:rotate3d(0,0,1,5deg)}80%{-webkit-transform:rotate3d(0,0,1,-5deg);transform:rotate3d(0,0,1,-5deg)}}@keyframes ha_swing{20%{-webkit-transform:rotate3d(0,0,1,15deg);transform:rotate3d(0,0,1,15deg)}40%{-webkit-transform:rotate3d(0,0,1,-10deg);transform:rotate3d(0,0,1,-10deg)}60%{-webkit-transform:rotate3d(0,0,1,5deg);transform:rotate3d(0,0,1,5deg)}80%{-webkit-transform:rotate3d(0,0,1,-5deg);transform:rotate3d(0,0,1,-5deg)}}@-webkit-keyframes ha_slideInDown{0%{visibility:visible;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}}@keyframes ha_slideInDown{0%{visibility:visible;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}}@-webkit-keyframes ha_slideInUp{0%{visibility:visible;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}}@keyframes ha_slideInUp{0%{visibility:visible;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}}@-webkit-keyframes ha_slideInLeft{0%{visibility:visible;-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0)}}@keyframes ha_slideInLeft{0%{visibility:visible;-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0)}}@-webkit-keyframes ha_slideInRight{0%{visibility:visible;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}}@keyframes ha_slideInRight{0%{visibility:visible;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}}.ha_fadeIn{-webkit-animation-name:ha_fadeIn;animation-name:ha_fadeIn}.ha_zoomIn{-webkit-animation-name:ha_zoomIn;animation-name:ha_zoomIn}.ha_rollIn{-webkit-animation-name:ha_rollIn;animation-name:ha_rollIn}.ha_bounce{-webkit-transform-origin:center bottom;-ms-transform-origin:center bottom;transform-origin:center bottom;-webkit-animation-name:ha_bounce;animation-name:ha_bounce}.ha_bounceIn{-webkit-animation-name:ha_bounceIn;animation-name:ha_bounceIn;-webkit-animation-duration:.75s;-webkit-animation-duration:calc(var(--animate-duration)*.75);animation-duration:.75s;animation-duration:calc(var(--animate-duration)*.75)}.ha_flipInX,.ha_flipInY{-webkit-animation-name:ha_flipInX;animation-name:ha_flipInX;-webkit-backface-visibility:visible!important;backface-visibility:visible!important}.ha_flipInY{-webkit-animation-name:ha_flipInY;animation-name:ha_flipInY}.ha_swing{-webkit-transform-origin:top center;-ms-transform-origin:top center;transform-origin:top center;-webkit-animation-name:ha_swing;animation-name:ha_swing}.ha_slideInDown{-webkit-animation-name:ha_slideInDown;animation-name:ha_slideInDown}.ha_slideInUp{-webkit-animation-name:ha_slideInUp;animation-name:ha_slideInUp}.ha_slideInLeft{-webkit-animation-name:ha_slideInLeft;animation-name:ha_slideInLeft}.ha_slideInRight{-webkit-animation-name:ha_slideInRight;animation-name:ha_slideInRight}.ha-css-transform-yes{-webkit-transition-duration:var(--ha-tfx-transition-duration, .2s);transition-duration:var(--ha-tfx-transition-duration, .2s);-webkit-transition-property:-webkit-transform;transition-property:transform;transition-property:transform,-webkit-transform;-webkit-transform:translate(var(--ha-tfx-translate-x, 0),var(--ha-tfx-translate-y, 0)) scale(var(--ha-tfx-scale-x, 1),var(--ha-tfx-scale-y, 1)) skew(var(--ha-tfx-skew-x, 0),var(--ha-tfx-skew-y, 0)) rotateX(var(--ha-tfx-rotate-x, 0)) rotateY(var(--ha-tfx-rotate-y, 0)) rotateZ(var(--ha-tfx-rotate-z, 0));transform:translate(var(--ha-tfx-translate-x, 0),var(--ha-tfx-translate-y, 0)) scale(var(--ha-tfx-scale-x, 1),var(--ha-tfx-scale-y, 1)) skew(var(--ha-tfx-skew-x, 0),var(--ha-tfx-skew-y, 0)) rotateX(var(--ha-tfx-rotate-x, 0)) rotateY(var(--ha-tfx-rotate-y, 0)) rotateZ(var(--ha-tfx-rotate-z, 0))}.ha-css-transform-yes:hover{-webkit-transform:translate(var(--ha-tfx-translate-x-hover, var(--ha-tfx-translate-x, 0)),var(--ha-tfx-translate-y-hover, var(--ha-tfx-translate-y, 0))) scale(var(--ha-tfx-scale-x-hover, var(--ha-tfx-scale-x, 1)),var(--ha-tfx-scale-y-hover, var(--ha-tfx-scale-y, 1))) skew(var(--ha-tfx-skew-x-hover, var(--ha-tfx-skew-x, 0)),var(--ha-tfx-skew-y-hover, var(--ha-tfx-skew-y, 0))) rotateX(var(--ha-tfx-rotate-x-hover, var(--ha-tfx-rotate-x, 0))) rotateY(var(--ha-tfx-rotate-y-hover, var(--ha-tfx-rotate-y, 0))) rotateZ(var(--ha-tfx-rotate-z-hover, var(--ha-tfx-rotate-z, 0)));transform:translate(var(--ha-tfx-translate-x-hover, var(--ha-tfx-translate-x, 0)),var(--ha-tfx-translate-y-hover, var(--ha-tfx-translate-y, 0))) scale(var(--ha-tfx-scale-x-hover, var(--ha-tfx-scale-x, 1)),var(--ha-tfx-scale-y-hover, var(--ha-tfx-scale-y, 1))) skew(var(--ha-tfx-skew-x-hover, var(--ha-tfx-skew-x, 0)),var(--ha-tfx-skew-y-hover, var(--ha-tfx-skew-y, 0))) rotateX(var(--ha-tfx-rotate-x-hover, var(--ha-tfx-rotate-x, 0))) rotateY(var(--ha-tfx-rotate-y-hover, var(--ha-tfx-rotate-y, 0))) rotateZ(var(--ha-tfx-rotate-z-hover, var(--ha-tfx-rotate-z, 0)))}.happy-addon>.elementor-widget-container{word-wrap:break-word;overflow-wrap:break-word}.happy-addon>.elementor-widget-container,.happy-addon>.elementor-widget-container *{-webkit-box-sizing:border-box;box-sizing:border-box}.happy-addon p:empty{display:none}.happy-addon .elementor-inline-editing{min-height:auto!important}.happy-addon-pro img{max-width:100%;height:auto;-o-object-fit:cover;object-fit:cover}.ha-screen-reader-text{position:absolute;overflow:hidden;clip:rect(1px,1px,1px,1px);margin:-1px;padding:0;width:1px;height:1px;border:0;word-wrap:normal!important;-webkit-clip-path:inset(50%);clip-path:inset(50%)}.ha-has-bg-overlay>.elementor-widget-container{position:relative;z-index:1}.ha-has-bg-overlay>.elementor-widget-container:before{position:absolute;top:0;left:0;z-index:-1;width:100%;height:100%;content:""}.ha-popup--is-enabled .ha-js-popup,.ha-popup--is-enabled .ha-js-popup img{cursor:-webkit-zoom-in!important;cursor:zoom-in!important}.mfp-wrap .mfp-arrow,.mfp-wrap .mfp-close{background-color:transparent}.mfp-wrap .mfp-arrow:focus,.mfp-wrap .mfp-close:focus{outline-width:thin}.ha-advanced-tooltip-enable{position:relative;cursor:pointer;--ha-tooltip-arrow-color:black;--ha-tooltip-arrow-distance:0}.ha-advanced-tooltip-enable .ha-advanced-tooltip-content{position:absolute;z-index:999;display:none;padding:5px 0;width:120px;height:auto;border-radius:6px;background-color:#000;color:#fff;text-align:center;opacity:0}.ha-advanced-tooltip-enable .ha-advanced-tooltip-content::after{position:absolute;border-width:5px;border-style:solid;content:""}.ha-advanced-tooltip-enable .ha-advanced-tooltip-content.no-arrow::after{visibility:hidden}.ha-advanced-tooltip-enable .ha-advanced-tooltip-content.show{display:inline-block;opacity:1}.ha-advanced-tooltip-enable.ha-advanced-tooltip-top .ha-advanced-tooltip-content,body[data-elementor-device-mode=tablet] .ha-advanced-tooltip-enable.ha-advanced-tooltip-tablet-top .ha-advanced-tooltip-content{top:unset;right:0;bottom:calc(101% + var(--ha-tooltip-arrow-distance));left:0;margin:0 auto}.ha-advanced-tooltip-enable.ha-advanced-tooltip-top .ha-advanced-tooltip-content::after,body[data-elementor-device-mode=tablet] .ha-advanced-tooltip-enable.ha-advanced-tooltip-tablet-top .ha-advanced-tooltip-content::after{top:100%;right:unset;bottom:unset;left:50%;border-color:var(--ha-tooltip-arrow-color) transparent transparent transparent;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%)}.ha-advanced-tooltip-enable.ha-advanced-tooltip-bottom .ha-advanced-tooltip-content,body[data-elementor-device-mode=tablet] .ha-advanced-tooltip-enable.ha-advanced-tooltip-tablet-bottom .ha-advanced-tooltip-content{top:calc(101% + var(--ha-tooltip-arrow-distance));right:0;bottom:unset;left:0;margin:0 auto}.ha-advanced-tooltip-enable.ha-advanced-tooltip-bottom .ha-advanced-tooltip-content::after,body[data-elementor-device-mode=tablet] .ha-advanced-tooltip-enable.ha-advanced-tooltip-tablet-bottom .ha-advanced-tooltip-content::after{top:unset;right:unset;bottom:100%;left:50%;border-color:transparent transparent var(--ha-tooltip-arrow-color) transparent;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%)}.ha-advanced-tooltip-enable.ha-advanced-tooltip-left .ha-advanced-tooltip-content,body[data-elementor-device-mode=tablet] .ha-advanced-tooltip-enable.ha-advanced-tooltip-tablet-left .ha-advanced-tooltip-content{top:50%;right:calc(101% + var(--ha-tooltip-arrow-distance));bottom:unset;left:unset;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}.ha-advanced-tooltip-enable.ha-advanced-tooltip-left .ha-advanced-tooltip-content::after,body[data-elementor-device-mode=tablet] .ha-advanced-tooltip-enable.ha-advanced-tooltip-tablet-left .ha-advanced-tooltip-content::after{top:50%;right:unset;bottom:unset;left:100%;border-color:transparent transparent transparent var(--ha-tooltip-arrow-color);-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}.ha-advanced-tooltip-enable.ha-advanced-tooltip-right .ha-advanced-tooltip-content,body[data-elementor-device-mode=tablet] .ha-advanced-tooltip-enable.ha-advanced-tooltip-tablet-right .ha-advanced-tooltip-content{top:50%;right:unset;bottom:unset;left:calc(101% + var(--ha-tooltip-arrow-distance));-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}.ha-advanced-tooltip-enable.ha-advanced-tooltip-right .ha-advanced-tooltip-content::after,body[data-elementor-device-mode=tablet] .ha-advanced-tooltip-enable.ha-advanced-tooltip-tablet-right .ha-advanced-tooltip-content::after{top:50%;right:100%;bottom:unset;left:unset;border-color:transparent var(--ha-tooltip-arrow-color) transparent transparent;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}body[data-elementor-device-mode=mobile] .ha-advanced-tooltip-enable.ha-advanced-tooltip-mobile-top .ha-advanced-tooltip-content{top:unset;right:0;bottom:calc(101% + var(--ha-tooltip-arrow-distance));left:0;margin:0 auto}body[data-elementor-device-mode=mobile] .ha-advanced-tooltip-enable.ha-advanced-tooltip-mobile-top .ha-advanced-tooltip-content::after{top:100%;right:unset;bottom:unset;left:50%;border-color:var(--ha-tooltip-arrow-color) transparent transparent transparent;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%)}body[data-elementor-device-mode=mobile] .ha-advanced-tooltip-enable.ha-advanced-tooltip-mobile-bottom .ha-advanced-tooltip-content{top:calc(101% + var(--ha-tooltip-arrow-distance));right:0;bottom:unset;left:0;margin:0 auto}body[data-elementor-device-mode=mobile] .ha-advanced-tooltip-enable.ha-advanced-tooltip-mobile-bottom .ha-advanced-tooltip-content::after{top:unset;right:unset;bottom:100%;left:50%;border-color:transparent transparent var(--ha-tooltip-arrow-color) transparent;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%)}body[data-elementor-device-mode=mobile] .ha-advanced-tooltip-enable.ha-advanced-tooltip-mobile-left .ha-advanced-tooltip-content{top:50%;right:calc(101% + var(--ha-tooltip-arrow-distance));bottom:unset;left:unset;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}body[data-elementor-device-mode=mobile] .ha-advanced-tooltip-enable.ha-advanced-tooltip-mobile-left .ha-advanced-tooltip-content::after{top:50%;right:unset;bottom:unset;left:100%;border-color:transparent transparent transparent var(--ha-tooltip-arrow-color);-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}body[data-elementor-device-mode=mobile] .ha-advanced-tooltip-enable.ha-advanced-tooltip-mobile-right .ha-advanced-tooltip-content{top:50%;right:unset;bottom:unset;left:calc(101% + var(--ha-tooltip-arrow-distance));-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}body[data-elementor-device-mode=mobile] .ha-advanced-tooltip-enable.ha-advanced-tooltip-mobile-right .ha-advanced-tooltip-content::after{top:50%;right:100%;bottom:unset;left:unset;border-color:transparent var(--ha-tooltip-arrow-color) transparent transparent;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}body.elementor-editor-active .happy-addon.ha-gravityforms .gform_wrapper{display:block!important}.ha-scroll-to-top-wrap.ha-scroll-to-top-hide{display:none}.ha-scroll-to-top-wrap.edit-mode,.ha-scroll-to-top-wrap.single-page-off{display:none!important}.ha-scroll-to-top-button{position:fixed;right:15px;bottom:15px;z-index:9999;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;align-items:center;-ms-flex-align:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;width:50px;height:50px;border-radius:50px;background-color:#5636d1;color:#fff;text-align:center;opacity:1;cursor:pointer;-webkit-transition:all .3s;transition:all .3s}.ha-scroll-to-top-button i{color:#fff;font-size:16px}.ha-scroll-to-top-button:hover{background-color:#e2498a}
+</style>
+<link rel='stylesheet' id='swiper-css' href='https://www.emveep.com/wp-content/plugins/elementor/assets/lib/swiper/css/swiper.min.css?ver=5.3.6' media='all' />
+<link rel='stylesheet' id='elementor-post-3091-css' href='https://www.emveep.com/wp-content/uploads/elementor/css/post-3091.css?ver=1687320885' media='all' />
+<link rel='stylesheet' id='elementor-pro-css' href='https://www.emveep.com/wp-content/plugins/elementor-pro/assets/css/frontend.min.css?ver=3.13.2' media='all' />
+<link rel='stylesheet' id='elementor-post-8344-css' href='https://www.emveep.com/wp-content/uploads/elementor/css/post-8344.css?ver=1687320968' media='all' />
+<link rel='stylesheet' id='elementor-post-11-css' href='https://www.emveep.com/wp-content/uploads/elementor/css/post-11.css?ver=1687320910' media='all' />
+<link rel='stylesheet' id='happy-icons-css' href='https://www.emveep.com/wp-content/plugins/happy-elementor-addons/assets/fonts/style.min.css?ver=3.8.4' media='all' />
+<link rel='stylesheet' id='font-awesome-css' href='https://www.emveep.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min.css?ver=4.7.0' media='all' />
+<link rel='stylesheet' id='elementor-post-45-css' href='https://www.emveep.com/wp-content/uploads/elementor/css/post-45.css?ver=1687320971' media='all' />
+<link rel='stylesheet' id='elementor-icons-ekiticons-css' href='https://www.emveep.com/wp-content/plugins/elementskit-lite/modules/elementskit-icon-pack/assets/css/ekiticons.css?ver=2.8.8' media='all' />
+<link rel='stylesheet' id='tablepress-default-css' href='https://www.emveep.com/wp-content/plugins/tablepress/css/build/default.css?ver=2.1.4' media='all' />
+<link rel='stylesheet' id='forget-about-shortcode-buttons-css' href='https://www.emveep.com/wp-content/plugins/forget-about-shortcode-buttons/public/css/button-styles.css?ver=2.1.3' media='all' />
+<link rel='stylesheet' id='ekit-widget-styles-css' href='https://www.emveep.com/wp-content/plugins/elementskit-lite/widgets/init/assets/css/widget-styles.css?ver=2.8.8' media='all' />
+<link rel='stylesheet' id='ekit-responsive-css' href='https://www.emveep.com/wp-content/plugins/elementskit-lite/widgets/init/assets/css/responsive.css?ver=2.8.8' media='all' />
+<link rel='stylesheet' id='eael-general-css' href='https://www.emveep.com/wp-content/plugins/essential-addons-for-elementor-lite/assets/front-end/css/view/general.min.css?ver=5.7.4' media='all' />
+<style id='rocket-lazyload-inline-css'>
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;cursor:pointer;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:72px;width:72px;left:50%;top:50%;margin-left:-36px;margin-top:-36px;position:absolute;background:url(https://www.emveep.com/wp-content/plugins/rocket-lazy-load/assets/img/youtube.png) no-repeat;cursor:pointer}.wp-has-aspect-ratio .rll-youtube-player{position:absolute;padding-bottom:0;width:100%;height:100%;top:0;bottom:0;left:0;right:0}
+</style>
+<link rel='stylesheet' id='google-fonts-1-css' href='https://fonts.googleapis.com/css?display=swap&family=Work+Sans%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7COpen+Sans%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=6.2' media='all' />
+<link rel='stylesheet' id='elementor-icons-shared-0-css' href='https://www.emveep.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-solid-css' href='https://www.emveep.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.3' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-brands-css' href='https://www.emveep.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.3' media='all' />
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><script src='https://www.emveep.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.3' id='jquery-core-js'></script>
+<script src='https://www.emveep.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.0' id='jquery-migrate-js'></script>
+<script src='https://www.emveep.com/wp-content/plugins/wp-smush-pro/app/assets/js/smush-lazy-load-native.min.js?ver=3.12.5' id='smush-lazy-load-js'></script>
+<link rel="https://api.w.org/" href="https://www.emveep.com/wp-json/" /><link rel="alternate" type="application/json" href="https://www.emveep.com/wp-json/wp/v2/pages/8344" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.emveep.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.emveep.com/wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress 6.2" />
+<link rel='shortlink' href='https://www.emveep.com/?p=8344' />
+<link rel="alternate" type="application/json+oembed" href="https://www.emveep.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.emveep.com%2F404-error%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.emveep.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.emveep.com%2F404-error%2F&#038;format=xml" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "LocalBusiness",
+  "name": "Emveep",
+  "address": "Jl. Sunda No.55 - 61, Kb. Pisang, Kec. Sumur Bandung, Kota Bandung, Jawa Barat 40235",
+  "image": "https://emveep.com/wp-content/uploads/2022/03/unsplash_YI_9SivVt_s-1024x256.png",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "ratingCount": "20",
+    "reviewCount": "100"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "-6.919080",
+    "longitude": "107.618480"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "opens": "09:00",
+    "closes": "17:30",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ]
+  },
+  "telephone": "(022) 6034882",
+  "priceRange": "$5000-$10000",
+  "url": "https://emveep.com/"
+}
+</script>
+<script type="application/ld+json">
+      {
+      "@context": "https://schema.org/",
+      "@type": "Organization",
+      "url": "https://www.emveep.com/",
+      "logo": "https://www.emveep.com/wp-content/uploads/2022/02/emveep-logo.png"
+      }
+    </script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDP1SR6N4E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BDP1SR6N4E');
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MR7D844');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-934308808"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-934308808');
+</script>		<script>
+			document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );
+		</script>
+				<style>
+			.no-js img.lazyload { display: none; }
+			figure.wp-block-image img.lazyloading { min-width: 150px; }
+							.lazyload, .lazyloading { opacity: 0; }
+				.lazyloaded {
+					opacity: 1;
+					transition: opacity 400ms;
+					transition-delay: 0ms;
+				}
+					</style>
+		<meta name="generator" content="Elementor 3.13.4; features: a11y_improvements, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-auto">
+<style>.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><link rel="preconnect" href="//code.tidio.co"><noscript><style>.lazyload[data-src]{display:none !important;}</style></noscript><style>.lazyload{background-image:none !important;}.lazyload:before{background-image:none !important;}</style><style>.wp-block-gallery.is-cropped .blocks-gallery-item picture{height:100%;width:100%;}</style><meta name="generator" content="Powered by Slider Revolution 6.6.13 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<script>function setREVStartSize(e){
+			//window.requestAnimationFrame(function() {
+				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;
+				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;
+				try {
+					var pw = document.getElementById(e.c).parentNode.offsetWidth,
+						newh;
+					pw = pw===0 || isNaN(pw) || (e.l=="fullwidth" || e.layout=="fullwidth") ? window.RSIW : pw;
+					e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
+					e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
+					e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
+					e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
+					e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
+					e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
+					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);
+					if(e.layout==="fullscreen" || e.l==="fullscreen")
+						newh = Math.max(e.mh,window.RSIH);
+					else{
+						e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];
+						e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
+						e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+						for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
+											
+						var nl = new Array(e.rl.length),
+							ix = 0,
+							sl;
+						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
+						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
+						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
+						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;
+						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
+						sl = nl[0];
+						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}
+						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);
+						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
+					}
+					var el = document.getElementById(e.c);
+					if (el!==null && el) el.style.height = newh+"px";
+					el = document.getElementById(e.c+"_wrapper");
+					if (el!==null && el) {
+						el.style.height = newh+"px";
+						el.style.display = "block";
+					}
+				} catch(e){
+					console.log("Failure at Presize of Slider:" + e)
+				}
+			//});
+		  };</script>
+		<style id="wp-custom-css">
+			a:visited {
+  color: #E60D00;
+}
+
+.button-menu-mobile {
+	background: #E10A11;
+	font-weight: 700 !important;
+	border-radius: 20px;
+}
+
+.button-menu-mobile:hover {
+	background: #C94549B8;
+}
+		</style>
+		<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript></head>
+
+<body data-rsssl=1 class="page-template page-template-elementor_header_footer page page-id-8344 wp-embed-responsive right-sidebar nav-float-right separate-containers header-aligned-left dropdown-hover jet-desktop-menu-active elementor-default elementor-template-full-width elementor-kit-3091 elementor-page elementor-page-8344 error404 pp404-std full-width-content" itemtype="https://schema.org/WebPage" itemscope>
+<script data-cfasync="false" data-no-defer="1" data-no-minify="1" data-no-optimize="1">if(typeof ewww_webp_supported==="undefined"){var ewww_webp_supported=!1}if(ewww_webp_supported){document.body.classList.add("webp-support")}</script>
+	<!-- Google Tag Manager (noscript) -->
+<noscript><iframe 
+height="0" width="0" style="display:none;visibility:hidden" data-src="https://www.googletagmanager.com/ns.html?id=GTM-MR7D844" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><a class="screen-reader-text skip-link" href="#content" title="Skip to content">Skip to content</a>		<div data-elementor-type="header" data-elementor-id="11" class="elementor elementor-11 elementor-location-header">
+					<div class="elementor-section-wrap">
+								<section data-bdt-sticky="animation: bdt-animation-scale-down; top: 100;position: start" class="bdt-sticky elementor-section elementor-top-section elementor-element elementor-element-3adadf6 elementor-section-content-middle blur-drop elementor-hidden-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3adadf6" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_ha_eqh_enable&quot;:false}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-16 elementor-top-column elementor-element elementor-element-3a6ee13" data-id="3a6ee13" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-90cb822 elementor-widget elementor-widget-image" data-id="90cb822" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-image">
+													<a href="https://www.emveep.com/">
+							<img width="1024" height="1024" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%201024'%3E%3C/svg%3E" class="attachment-large size-large wp-image-8822" alt="Software Development Company Indonesia" data-lazy-srcset="https://www.emveep.com/wp-content/uploads//2022/01/emveep-logo-header-footer.svg 150w, https://www.emveep.com/wp-content/uploads//2022/01/emveep-logo-header-footer.svg 300w, https://www.emveep.com/wp-content/uploads//2022/01/emveep-logo-header-footer.svg 1024w" data-lazy-sizes="(max-width: 1024px) 100vw, 1024px" data-lazy-src="https://www.emveep.com/wp-content/uploads/2022/01/emveep-logo-header-footer.svg" /><noscript><img width="1024" height="1024"   alt="Software Development Company Indonesia" data-srcset="https://www.emveep.com/wp-content/uploads//2022/01/emveep-logo-header-footer.svg 150w, https://www.emveep.com/wp-content/uploads//2022/01/emveep-logo-header-footer.svg 300w, https://www.emveep.com/wp-content/uploads//2022/01/emveep-logo-header-footer.svg 1024w"  data-src="https://www.emveep.com/wp-content/uploads/2022/01/emveep-logo-header-footer.svg" data-sizes="(max-width: 1024px) 100vw, 1024px" class="attachment-large size-large wp-image-8822 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></noscript>								</a>
+														</div>
+						</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-66 elementor-top-column elementor-element elementor-element-d5cf39d" data-id="d5cf39d" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-980d899 elementor-widget elementor-widget-jet-mega-menu" data-id="980d899" data-element_type="widget" data-widget_type="jet-mega-menu.default">
+				<div class="elementor-widget-container">
+			<div class="menu-utama-container"><div class="jet-menu-container"><div class="jet-menu-inner"><ul class="jet-menu jet-menu--animation-type-fade jet-menu--roll-up"><li id="jet-menu-item-6541" class="jet-menu-item jet-menu-item-type-custom jet-menu-item-object-custom jet-menu-item-home jet-has-roll-up jet-simple-menu-item jet-regular-item jet-menu-item-6541"><a href="https://www.emveep.com" class="top-level-link"><div class="jet-menu-item-wrapper"><div class="jet-menu-title">Home</div></div></a></li>
+<li id="jet-menu-item-33" class="jet-menu-item jet-menu-item-type-post_type jet-menu-item-object-page jet-menu-item-has-children jet-has-roll-up jet-mega-menu-item jet-regular-item jet-menu-item-has-children jet-menu-item-33"><a href="https://www.emveep.com/services/" class="top-level-link"><div class="jet-menu-item-wrapper"><div class="jet-menu-title">Services</div><i class="jet-dropdown-arrow fa fa-angle-down"></i></div></a><div class="jet-sub-mega-menu" data-template-id="8496">		<div data-elementor-type="wp-post" data-elementor-id="8496" class="elementor elementor-8496">
+						<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+									<section class="elementor-section elementor-top-section elementor-element elementor-element-36ce7d9 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="36ce7d9" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_ha_eqh_enable&quot;:false}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-19ab3d41" data-id="19ab3d41" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-dc5ee07 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="dc5ee07" data-element_type="section" data-settings="{&quot;_ha_eqh_enable&quot;:false}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-812df91" data-id="812df91" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-ce6824b elementor-widget elementor-widget-heading" data-id="ce6824b" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-large">Web Development Services​</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-577bb81 elementor-widget elementor-widget-heading" data-id="577bb81" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Put your best foot forward with a website that's not only attractive, but also functional and easy to navigate.​</p>		</div>
+				</div>
+				<div class="elementor-element elementor-element-15ba26a primary-btn elementor-widget elementor-widget-button" data-id="15ba26a" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="https://www.emveep.com/web-development-services/" class="elementor-button-link elementor-button elementor-size-xs" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">Explore now</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-ce0f792 elementor-widget elementor-widget-spacer" data-id="ce0f792" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-386b713" data-id="386b713" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-c07e0b0 elementor-widget elementor-widget-heading" data-id="c07e0b0" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-large">Mobile Development Services​</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-c665243 elementor-widget elementor-widget-heading" data-id="c665243" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default"> Don't settle for clunky, outdated apps that don't meet the needs of your users. Let us help you create a user-friendly and seamless mobile app.​​</p>		</div>
+				</div>
+				<div class="elementor-element elementor-element-1fbbcd1 primary-btn elementor-widget elementor-widget-button" data-id="1fbbcd1" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="https://www.emveep.com/mobile-development-services/" class="elementor-button-link elementor-button elementor-size-xs" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">Explore now</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-e4fff7a elementor-widget elementor-widget-spacer" data-id="e4fff7a" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-514cbcf" data-id="514cbcf" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-24f71a6 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="24f71a6" data-element_type="section" data-settings="{&quot;_ha_eqh_enable&quot;:false}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-0bd654f" data-id="0bd654f" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-b006b13 elementor-widget elementor-widget-premium-addon-button" data-id="b006b13" data-element_type="widget" data-widget_type="premium-addon-button.default">
+				<div class="elementor-widget-container">
+			
+
+		<a class="premium-button premium-button-none premium-btn-lg premium-button-none" href="https://reactjs.emveep.com/">
+			<div class="premium-button-text-icon-wrapper">
+								<span >
+					React Js				</span>
+							</div>
+								</a>
+
+
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-34824f1 elementor-widget elementor-widget-premium-addon-button" data-id="34824f1" data-element_type="widget" data-widget_type="premium-addon-button.default">
+				<div class="elementor-widget-container">
+			
+
+		<a class="premium-button premium-button-none premium-btn-lg premium-button-none" href="https://nodejs.emveep.com/">
+			<div class="premium-button-text-icon-wrapper">
+								<span >
+					Node Js				</span>
+							</div>
+								</a>
+
+
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-2333a06 elementor-widget elementor-widget-premium-addon-button" data-id="2333a06" data-element_type="widget" data-widget_type="premium-addon-button.default">
+				<div class="elementor-widget-container">
+			
+
+		<a class="premium-button premium-button-none premium-btn-lg premium-button-none" href="https://vue.emveep.com/">
+			<div class="premium-button-text-icon-wrapper">
+								<span >
+					Vue Js				</span>
+							</div>
+								</a>
+
+
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-b8e50dc elementor-widget elementor-widget-premium-addon-button" data-id="b8e50dc" data-element_type="widget" data-widget_type="premium-addon-button.default">
+				<div class="elementor-widget-container">
+			
+
+		<a class="premium-button premium-button-none premium-btn-lg premium-button-none" href="https://ror.emveep.com/">
+			<div class="premium-button-text-icon-wrapper">
+								<span >
+					Ruby On Rails				</span>
+							</div>
+								</a>
+
+
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-ddb42a8 elementor-widget elementor-widget-premium-addon-button" data-id="ddb42a8" data-element_type="widget" data-widget_type="premium-addon-button.default">
+				<div class="elementor-widget-container">
+			
+
+		<a class="premium-button premium-button-none premium-btn-lg premium-button-none" href="https://golang.emveep.com/">
+			<div class="premium-button-text-icon-wrapper">
+								<span >
+					Golang				</span>
+							</div>
+								</a>
+
+
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-a621b78" data-id="a621b78" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-020f44f elementor-widget elementor-widget-premium-addon-button" data-id="020f44f" data-element_type="widget" data-widget_type="premium-addon-button.default">
+				<div class="elementor-widget-container">
+			
+
+		<a class="premium-button premium-button-none premium-btn-lg premium-button-none" href="https://ios.emveep.com/">
+			<div class="premium-button-text-icon-wrapper">
+								<span >
+					iOS				</span>
+							</div>
+								</a>
+
+
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-3effd73 elementor-widget elementor-widget-premium-addon-button" data-id="3effd73" data-element_type="widget" data-widget_type="premium-addon-button.default">
+				<div class="elementor-widget-container">
+			
+
+		<a class="premium-button premium-button-none premium-btn-lg premium-button-none" href="https://android.emveep.com/">
+			<div class="premium-button-text-icon-wrapper">
+								<span >
+					Android				</span>
+							</div>
+								</a>
+
+
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-9c2a894 elementor-widget elementor-widget-premium-addon-button" data-id="9c2a894" data-element_type="widget" data-widget_type="premium-addon-button.default">
+				<div class="elementor-widget-container">
+			
+
+		<a class="premium-button premium-button-none premium-btn-lg premium-button-none" href="https://reactnative.emveep.com/">
+			<div class="premium-button-text-icon-wrapper">
+								<span >
+					React Native				</span>
+							</div>
+								</a>
+
+
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-cac762d elementor-widget elementor-widget-premium-addon-button" data-id="cac762d" data-element_type="widget" data-widget_type="premium-addon-button.default">
+				<div class="elementor-widget-container">
+			
+
+		<a class="premium-button premium-button-none premium-btn-lg premium-button-none" href="https://flutter.emveep.com/">
+			<div class="premium-button-text-icon-wrapper">
+								<span >
+					Flutter				</span>
+							</div>
+								</a>
+
+
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-af5c89d elementor-widget elementor-widget-premium-addon-button" data-id="af5c89d" data-element_type="widget" data-widget_type="premium-addon-button.default">
+				<div class="elementor-widget-container">
+			
+
+		<a class="premium-button premium-button-none premium-btn-lg premium-button-none" href="https://net.emveep.com/">
+			<div class="premium-button-text-icon-wrapper">
+								<span >
+					.Net				</span>
+							</div>
+								</a>
+
+
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<div class="elementor-element elementor-element-2591b0e elementor-align-left elementor-widget elementor-widget-bdt-advanced-button" data-id="2591b0e" data-element_type="widget" data-widget_type="bdt-advanced-button.default">
+				<div class="elementor-widget-container">
+					<div class="bdt-ep-button-wrapper">
+			<a href="https://www.emveep.com/services/" class="bdt-ep-button bdt-ep-button-effect-a bdt-ep-button-size-sm">
+						<div class="bdt-ep-button-content-wrapper bdt-flex bdt-flex-middle bdt-flex-center  " data-text="All Services">
+							<div class="bdt-ep-button-icon bdt-flex-center bdt-flex-align-right">
+					<div class="bdt-ep-button-icon-inner">
+
+					<i aria-hidden="true" class="fa-fw fas fa-angle-right"></i>
+					</div>
+				</div>
+			
+			<div class="bdt-ep-button-text">
+
+                <span class="avdbtn-text">All Services</span>
+
+				            </div>
+
+			
+		</div>
+					</a>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+									</div>
+			</div>
+					</div>
+		</div></li>
+<li id="jet-menu-item-29" class="jet-menu-item jet-menu-item-type-post_type jet-menu-item-object-page jet-has-roll-up jet-simple-menu-item jet-regular-item jet-menu-item-29"><a href="https://www.emveep.com/about-us/" class="top-level-link"><div class="jet-menu-item-wrapper"><div class="jet-menu-title">About Us</div></div></a></li>
+<li id="jet-menu-item-4994" class="jet-menu-item jet-menu-item-type-custom jet-menu-item-object-custom jet-has-roll-up jet-simple-menu-item jet-regular-item jet-menu-item-4994"><a href="/work" class="top-level-link"><div class="jet-menu-item-wrapper"><div class="jet-menu-title">Work</div></div></a></li>
+<li id="jet-menu-item-27" class="jet-menu-item jet-menu-item-type-post_type jet-menu-item-object-page jet-has-roll-up jet-simple-menu-item jet-regular-item jet-menu-item-27"><a href="https://www.emveep.com/blog/" class="top-level-link"><div class="jet-menu-item-wrapper"><div class="jet-menu-title">Blog</div></div></a></li>
+<li id="jet-menu-item-30" class="jet-menu-item jet-menu-item-type-post_type jet-menu-item-object-page jet-has-roll-up jet-simple-menu-item jet-regular-item jet-menu-item-30"><a href="https://www.emveep.com/contact-us/" class="top-level-link"><div class="jet-menu-item-wrapper"><div class="jet-menu-title">Contact Us</div></div></a></li>
+<li id="jet-menu-item-31" class="jet-menu-item jet-menu-item-type-post_type jet-menu-item-object-page jet-has-roll-up jet-simple-menu-item jet-regular-item jet-menu-item-31"><a href="https://www.emveep.com/career/" class="top-level-link"><div class="jet-menu-item-wrapper"><div class="jet-menu-title">Career</div></div></a></li>
+</ul></div></div></div>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-16 elementor-top-column elementor-element elementor-element-18b2465" data-id="18b2465" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-bff41ac elementor-mobile-align-right elementor-widget elementor-widget-button" data-id="bff41ac" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="https://wa.me/447937784637?text=Hello%20Team!%20I%20want%20to%20discuss%20about%20my%20project." class="elementor-button-link elementor-button elementor-size-xs" role="button">
+						<span class="elementor-button-content-wrapper">
+							<span class="elementor-button-icon elementor-align-icon-left">
+				<i aria-hidden="true" class="fab fa-whatsapp"></i>			</span>
+						<span class="elementor-button-text">Chat with Us</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section data-bdt-sticky="animation: bdt-animation-scale-down; top: 100;position: start" class="bdt-sticky elementor-section elementor-top-section elementor-element elementor-element-159a00e elementor-section-content-middle blur-drop elementor-hidden-desktop elementor-hidden-tablet elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="159a00e" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_ha_eqh_enable&quot;:false}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-8e93bc3" data-id="8e93bc3" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-fec7268 elementor-widget-mobile__width-auto elementor-widget elementor-widget-image" data-id="fec7268" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-image">
+													<a href="https://www.emveep.com/">
+							<img width="1024" height="1024" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%201024'%3E%3C/svg%3E" class="attachment-large size-large wp-image-8822" alt="Software Development Company Indonesia" data-lazy-srcset="https://www.emveep.com/wp-content/uploads//2022/01/emveep-logo-header-footer.svg 150w, https://www.emveep.com/wp-content/uploads//2022/01/emveep-logo-header-footer.svg 300w, https://www.emveep.com/wp-content/uploads//2022/01/emveep-logo-header-footer.svg 1024w" data-lazy-sizes="(max-width: 1024px) 100vw, 1024px" data-lazy-src="https://www.emveep.com/wp-content/uploads/2022/01/emveep-logo-header-footer.svg" /><noscript><img width="1024" height="1024"   alt="Software Development Company Indonesia" data-srcset="https://www.emveep.com/wp-content/uploads//2022/01/emveep-logo-header-footer.svg 150w, https://www.emveep.com/wp-content/uploads//2022/01/emveep-logo-header-footer.svg 300w, https://www.emveep.com/wp-content/uploads//2022/01/emveep-logo-header-footer.svg 1024w"  data-src="https://www.emveep.com/wp-content/uploads/2022/01/emveep-logo-header-footer.svg" data-sizes="(max-width: 1024px) 100vw, 1024px" class="attachment-large size-large wp-image-8822 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></noscript>								</a>
+														</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-8846e28 elementor-widget-mobile__width-inherit elementor-nav-menu__align-left elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="8846e28" data-element_type="widget" data-settings="{&quot;layout&quot;:&quot;vertical&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;fas fa-caret-down\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+						<nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical e--pointer-underline e--animation-fade">
+				<ul id="menu-1-8846e28" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-6662"><a href="https://www.emveep.com" class="elementor-item">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4186"><a href="https://www.emveep.com/services/" class="elementor-item">Services</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10402"><a href="https://www.emveep.com/web-development-services/" class="elementor-sub-item">Web Development Company</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10401"><a href="https://www.emveep.com/mobile-development-services/" class="elementor-sub-item">Mobile App Development Company</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4188"><a href="https://www.emveep.com/about-us/" class="elementor-item">About Us</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4995"><a href="/work" class="elementor-item">Work</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4191"><a href="https://www.emveep.com/blog/" class="elementor-item">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4189"><a href="https://www.emveep.com/contact-us/" class="elementor-item">Contact Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4187"><a href="https://www.emveep.com/career/" class="elementor-item">Career</a></li>
+<li class="button-menu-mobile menu-item menu-item-type-custom menu-item-object-custom menu-item-4192"><a href="https://wa.me/447937784637?text=Hello%20Team!%20I%20want%20to%20discuss%20about%20my%20project." class="elementor-item"><i class="fab fa-whatsapp"></i>  Chat with Us</a></li>
+</ul>			</nav>
+					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
+			<i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open eicon-menu-bar"></i><i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close eicon-close"></i>			<span class="elementor-screen-only">Menu</span>
+		</div>
+					<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+				<ul id="menu-2-8846e28" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-6662"><a href="https://www.emveep.com" class="elementor-item" tabindex="-1">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4186"><a href="https://www.emveep.com/services/" class="elementor-item" tabindex="-1">Services</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10402"><a href="https://www.emveep.com/web-development-services/" class="elementor-sub-item" tabindex="-1">Web Development Company</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10401"><a href="https://www.emveep.com/mobile-development-services/" class="elementor-sub-item" tabindex="-1">Mobile App Development Company</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4188"><a href="https://www.emveep.com/about-us/" class="elementor-item" tabindex="-1">About Us</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4995"><a href="/work" class="elementor-item" tabindex="-1">Work</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4191"><a href="https://www.emveep.com/blog/" class="elementor-item" tabindex="-1">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4189"><a href="https://www.emveep.com/contact-us/" class="elementor-item" tabindex="-1">Contact Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4187"><a href="https://www.emveep.com/career/" class="elementor-item" tabindex="-1">Career</a></li>
+<li class="button-menu-mobile menu-item menu-item-type-custom menu-item-object-custom menu-item-4192"><a href="https://wa.me/447937784637?text=Hello%20Team!%20I%20want%20to%20discuss%20about%20my%20project." class="elementor-item" tabindex="-1"><i class="fab fa-whatsapp"></i>  Chat with Us</a></li>
+</ul>			</nav>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+							</div>
+				</div>
+		
+	<div class="site grid-container container hfeed" id="page">
+				<div class="site-content" id="content">
+					<div data-elementor-type="wp-page" data-elementor-id="8344" class="elementor elementor-8344">
+						<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+									<section class="elementor-section elementor-top-section elementor-element elementor-element-1b1a4be elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="1b1a4be" data-element_type="section" data-settings="{&quot;_ha_eqh_enable&quot;:false}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-cba513b" data-id="cba513b" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-4d87dd3 elementor-widget elementor-widget-heading" data-id="4d87dd3" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h1 class="elementor-heading-title elementor-size-default">Oops... We lost this page</h1>		</div>
+				</div>
+				<div class="elementor-element elementor-element-bf5c0c7 elementor-widget elementor-widget-heading" data-id="bf5c0c7" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<span class="elementor-heading-title elementor-size-medium">We searched everywhere but couldn't find what you're looking for. 
+Let's find a better place for you to go.</span>		</div>
+				</div>
+				<div class="elementor-element elementor-element-1f05c7d elementor-mobile-align-right elementor-widget elementor-widget-button" data-id="1f05c7d" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="https://emveep.com/" class="elementor-button-link elementor-button elementor-size-xs" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">Back to Home</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-44606dc" data-id="44606dc" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-90f03f9 elementor-widget elementor-widget-image" data-id="90f03f9" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-image">
+												<img decoding="async" width="787" height="565" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20787%20565'%3E%3C/svg%3E" class="attachment-full size-full wp-image-8269" alt="" data-lazy-src="https://www.emveep.com/wp-content/uploads/2023/02/404-red.svg" /><noscript><img decoding="async" width="787" height="565"   alt="" data-src="https://www.emveep.com/wp-content/uploads/2023/02/404-red.svg" class="attachment-full size-full wp-image-8269 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></noscript>														</div>
+						</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+									</div>
+			</div>
+					</div>
+		
+	</div>
+</div>
+
+
+<div class="site-footer">
+			<div data-elementor-type="footer" data-elementor-id="45" class="elementor elementor-45 elementor-location-footer">
+					<div class="elementor-section-wrap">
+								<section class="elementor-section elementor-top-section elementor-element elementor-element-34bfcd3 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="34bfcd3" data-element_type="section" data-settings="{&quot;_ha_eqh_enable&quot;:false}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-d53f359" data-id="d53f359" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-8b872f1 elementor-widget elementor-widget-image" data-id="8b872f1" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-image">
+													<a href="https://www.emveep.com/">
+							<img width="1024" height="1024" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%201024'%3E%3C/svg%3E" class="attachment-large size-large wp-image-8822" alt="Software Development Company Indonesia" data-lazy-srcset="https://www.emveep.com/wp-content/uploads//2022/01/emveep-logo-header-footer.svg 150w, https://www.emveep.com/wp-content/uploads//2022/01/emveep-logo-header-footer.svg 300w, https://www.emveep.com/wp-content/uploads//2022/01/emveep-logo-header-footer.svg 1024w" data-lazy-sizes="(max-width: 1024px) 100vw, 1024px" data-lazy-src="https://www.emveep.com/wp-content/uploads/2022/01/emveep-logo-header-footer.svg" /><noscript><img width="1024" height="1024"   alt="Software Development Company Indonesia" data-srcset="https://www.emveep.com/wp-content/uploads//2022/01/emveep-logo-header-footer.svg 150w, https://www.emveep.com/wp-content/uploads//2022/01/emveep-logo-header-footer.svg 300w, https://www.emveep.com/wp-content/uploads//2022/01/emveep-logo-header-footer.svg 1024w"  data-src="https://www.emveep.com/wp-content/uploads/2022/01/emveep-logo-header-footer.svg" data-sizes="(max-width: 1024px) 100vw, 1024px" class="attachment-large size-large wp-image-8822 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></noscript>								</a>
+														</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-1918411 elementor-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="1918411" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-map-marker-alt"></i>						</span>
+										<span class="elementor-icon-list-text">Lima Building Jl. Sunda No.59-61, Bandung, West Java, Indonesia</span>
+									</li>
+						</ul>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-876ebea e-grid-align-left elementor-shape-rounded elementor-grid-0 elementor-widget elementor-widget-social-icons" data-id="876ebea" data-element_type="widget" data-widget_type="social-icons.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-social-icons-wrapper elementor-grid">
+							<span class="elementor-grid-item">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-repeater-item-a70b1f3" href="https://web.facebook.com/emveep" target="_blank">
+						<span class="elementor-screen-only">Facebook</span>
+						<i class="fab fa-facebook"></i>					</a>
+				</span>
+							<span class="elementor-grid-item">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin elementor-repeater-item-7d30852" href="https://www.linkedin.com/company/emveep" target="_blank">
+						<span class="elementor-screen-only">Linkedin</span>
+						<i class="fab fa-linkedin"></i>					</a>
+				</span>
+							<span class="elementor-grid-item">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-337f142" href="https://www.instagram.com/emveepcom/" target="_blank">
+						<span class="elementor-screen-only">Instagram</span>
+						<i class="fab fa-instagram"></i>					</a>
+				</span>
+					</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-3e9d98f" data-id="3e9d98f" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-d623985 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="d623985" data-element_type="section" data-settings="{&quot;_ha_eqh_enable&quot;:false}">
+						<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-8bdf108" data-id="8bdf108" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-945a65c elementor-widget elementor-widget-heading" data-id="945a65c" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">Menu</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-cca7009 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="cca7009" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<a href="https://www.emveep.com/services/">
+
+											<span class="elementor-icon-list-text">Services</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://www.emveep.com/work/">
+
+											<span class="elementor-icon-list-text">Work</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://www.emveep.com/about-us/">
+
+											<span class="elementor-icon-list-text">About</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://www.emveep.com/blog/">
+
+											<span class="elementor-icon-list-text">Blog</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://www.emveep.com/contact-us/">
+
+											<span class="elementor-icon-list-text">Contact</span>
+											</a>
+									</li>
+						</ul>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-63026ed" data-id="63026ed" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-96e9913 elementor-widget elementor-widget-heading" data-id="96e9913" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">Expertise</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-5cca8c1 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="5cca8c1" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<a href="https://reactjs.emveep.com/">
+
+											<span class="elementor-icon-list-text">React Js</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://nodejs.emveep.com/">
+
+											<span class="elementor-icon-list-text">Node Js</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://vue.emveep.com/">
+
+											<span class="elementor-icon-list-text">Vue Js</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://ror.emveep.com/">
+
+											<span class="elementor-icon-list-text">Ruby on Rails</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://golang.emveep.com/">
+
+											<span class="elementor-icon-list-text">Golang</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://ios.emveep.com/">
+
+											<span class="elementor-icon-list-text">iOS</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://android.emveep.com/">
+
+											<span class="elementor-icon-list-text">Android</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://reactnative.emveep.com/">
+
+											<span class="elementor-icon-list-text">React Native</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://flutter.emveep.com/">
+
+											<span class="elementor-icon-list-text">Flutter</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://net.emveep.com/">
+
+											<span class="elementor-icon-list-text">.Net</span>
+											</a>
+									</li>
+						</ul>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-175ddef" data-id="175ddef" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-6ba20e4 elementor-widget elementor-widget-heading" data-id="6ba20e4" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Have a question regarding
+your next project?</p>		</div>
+				</div>
+				<div class="elementor-element elementor-element-42f30d1 elementor-align-left elementor-widget elementor-widget-button" data-id="42f30d1" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="mailto:info@emveep.com" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+						<span class="elementor-button-content-wrapper">
+							<span class="elementor-button-icon elementor-align-icon-right">
+				<i aria-hidden="true" class="fas fa-arrow-right"></i>			</span>
+						<span class="elementor-button-text">info@emveep.com</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-523a144 elementor-widget__width-initial elementor-widget elementor-widget-html" data-id="523a144" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<script type="text/javascript" src="https://widget.clutch.co/static/js/widget.js"></script> <div class="clutch-widget" data-nofollow="true" data-url="https://widget.clutch.co" data-widget-type="1" data-darkbg="true" data-height="40" data-clutchcompany-id="523509"></div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-0b70d30 elementor-widget elementor-widget-html" data-id="0b70d30" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<script>var cssid="csscr",t=String(Date.now()).substring(0,10); if(!document.getElementById(cssid)){var dm="https://www.crowdreviews.com/",head=document.getElementsByTagName("head")[0],link=document.createElement("link"),linkm=document.createElement("link"),j=document.createElement("script");link.id=cssid,link.rel="stylesheet",link.type="text/css",link.href=dm+"b."+t+".css",link.media="all";linkm.rel="stylesheet",linkm.href="//fonts.googleapis.com/css?display=swap&family=Montserrat:400";j.setAttribute("type","text/javascript"),j.setAttribute("data-id","141668"),j.setAttribute("src",dm+"b."+t+".js"),j.id="j-GjPxd4USR",head.appendChild(link),head.appendChild(linkm),head.appendChild(j)}</script><div id="crowdreviews-badge-GjPxd4USR"><div id="t-GjPxd4USR"><span class="pull-left-GjPxd4USR"><img alt="CrowdReviews.com Logo" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.crowdreviews.com/themes/camo/images/cr_logo_small.png"><noscript><img alt="CrowdReviews.com Logo"  data-src="https://www.crowdreviews.com/themes/camo/images/cr_logo_small.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></noscript></span><span class="pull-right-GjPxd4USR"><a href="https://www.crowdreviews.com/emveep" rel="nofollow" target="_blank"><i class="icon irgyb"></i><i class="icon irgyb"></i><i class="icon irgyb"></i><i class="icon irgyb"></i><i class="icon irgyb"></i></a></span></div><div id="b-GjPxd4USR">The crowd rates us 0.0 out of 5.0</div><p class="no-br-GjPxd4USR"><a href="https://www.crowdreviews.com/emveep#reviews" target="_blank">Read all 0 Reviews</a> / <a href="https://www.crowdreviews.com/emveep" target="_blank">Write A Review</a></p></div>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-c8e2f00 elementor-hidden-desktop elementor-hidden-tablet elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c8e2f00" data-element_type="section" data-settings="{&quot;_ha_eqh_enable&quot;:false}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-67e374a" data-id="67e374a" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-209a543 elementor-widget elementor-widget-heading" data-id="209a543" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Copyright © 2006 - 2023 PT Kirana Tama Teknologi, a division of </p>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-04146ed" data-id="04146ed" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-ff09f76 elementor-widget elementor-widget-image" data-id="ff09f76" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-image">
+													<a href="https://www.wgs.co.id/">
+							<img width="164" height="37" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20164%2037'%3E%3C/svg%3E" class="attachment-1536x1536 size-1536x1536 wp-image-8307" alt="WGS software development company" data-lazy-src="https://www.emveep.com/wp-content/uploads/2022/01/logo-wgs-white-5d0082ffc3a9b270058e79cb01b80feba82a0e5c68a758f1a2d226c0f6caf950.svg" /><noscript><img width="164" height="37"   alt="WGS software development company" data-src="https://www.emveep.com/wp-content/uploads/2022/01/logo-wgs-white-5d0082ffc3a9b270058e79cb01b80feba82a0e5c68a758f1a2d226c0f6caf950.svg" class="attachment-1536x1536 size-1536x1536 wp-image-8307 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></noscript>								</a>
+														</div>
+						</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-0ebfbac" data-id="0ebfbac" data-element_type="column">
+			<div class="elementor-column-wrap">
+							<div class="elementor-widget-wrap">
+								</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-23548dd" data-id="23548dd" data-element_type="column">
+			<div class="elementor-column-wrap">
+							<div class="elementor-widget-wrap">
+								</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-103ae73 elementor-hidden-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="103ae73" data-element_type="section" data-settings="{&quot;_ha_eqh_enable&quot;:false}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-72f28f3" data-id="72f28f3" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-e1668d5 elementor-position-right elementor-vertical-align-middle elementor-widget__width-auto elementor-view-default elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="e1668d5" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<a class="elementor-icon elementor-animation-" href="https://wgs.co.id/">
+				<svg xmlns="http://www.w3.org/2000/svg" width="164" height="37" viewBox="0 0 164 37" fill="none"><g clip-path="url(#clip0_804_6347)"><path d="M121.232 8.74546L119.211 0.448486H121.232L121.905 3.81212C122.13 4.82121 122.242 5.8303 122.354 6.72727C122.467 5.8303 122.691 4.82121 122.916 3.81212L123.589 0.448486H125.61L126.283 3.92424C126.508 4.93333 126.62 5.8303 126.732 6.72727C126.845 5.8303 127.069 4.82121 127.181 3.81212L127.855 0.448486H129.763L127.63 8.74546H125.722L125.049 5.15758C124.936 4.37273 124.712 3.58788 124.6 2.57879C124.487 3.47576 124.263 4.26061 124.151 5.15758L123.365 8.74546H121.232V8.74546Z" fill="white"></path><path d="M133.467 5.94231C132.457 5.94231 131.671 6.16655 131.671 6.83928C131.671 7.28776 132.008 7.51201 132.457 7.51201C132.906 7.51201 133.355 7.17564 133.467 6.83928C133.467 6.72716 133.467 6.61504 133.467 6.50292V5.94231V5.94231ZM135.264 7.28777C135.264 7.84837 135.264 8.40898 135.376 8.74534H133.692L133.58 8.18473C133.131 8.63322 132.569 8.96958 131.896 8.96958C130.661 8.96958 129.988 8.07261 129.988 7.17564C129.988 5.60595 131.447 4.8211 133.467 4.8211V4.59686C133.467 4.26049 133.243 3.81201 132.345 3.81201C131.784 3.81201 131.11 4.03625 130.661 4.26049L130.324 3.02716C130.773 2.80292 131.559 2.46655 132.682 2.46655C134.702 2.46655 135.264 3.69989 135.264 5.04534V7.28777V7.28777Z" fill="white"></path><path d="M138.631 0H136.723V8.74545H138.631V0Z" fill="white"></path><path d="M144.131 5.2697C144.131 5.15758 144.131 5.04546 144.131 4.93333C144.019 4.48485 143.57 4.03636 143.009 4.03636C142.111 4.03636 141.662 4.82121 141.662 5.71818C141.662 6.72727 142.111 7.4 142.897 7.4C143.458 7.4 143.907 7.06364 144.019 6.50303C144.019 6.39091 144.019 6.16667 144.019 6.05455V5.2697H144.131ZM146.04 0V6.95152C146.04 7.62424 146.04 8.29697 146.04 8.74546H144.356V7.84849C144.019 8.52121 143.233 8.85758 142.448 8.85758C140.988 8.85758 139.866 7.62424 139.866 5.71818C139.866 3.7 141.101 2.46667 142.56 2.46667C143.346 2.46667 143.907 2.69091 144.131 3.13939V0H146.04Z" fill="white"></path><path d="M151.091 5.04534C151.091 4.59686 150.867 3.81201 150.081 3.81201C149.295 3.81201 148.958 4.48473 148.958 5.04534H151.091ZM148.958 6.27867C148.958 7.06352 149.744 7.39989 150.642 7.39989C151.316 7.39989 151.765 7.28776 152.326 7.17564L152.55 8.40898C151.989 8.63322 151.203 8.74534 150.418 8.74534C148.397 8.74534 147.162 7.51201 147.162 5.71807C147.162 4.14837 148.06 2.46655 150.193 2.46655C152.101 2.46655 152.887 3.92413 152.887 5.49383C152.887 5.83019 152.887 6.05443 152.775 6.27867H148.958V6.27867Z" fill="white"></path><path d="M154.01 4.59686C154.01 3.81201 154.01 3.2514 154.01 2.6908H155.581L155.693 3.47564C155.918 3.02716 156.591 2.46655 157.602 2.46655C158.836 2.46655 159.734 3.2514 159.734 5.04534V8.63322H157.826V5.26958C157.826 4.48473 157.602 3.92413 156.928 3.92413C156.367 3.92413 156.142 4.26049 155.918 4.59686C155.918 4.70898 155.806 4.93322 155.806 5.04534V8.5211H153.897V4.59686H154.01Z" fill="white"></path><path d="M126.845 21.6394C126.283 21.8636 125.161 22.0879 124.038 22.0879C122.579 22.0879 121.456 21.7515 120.671 20.9667C119.885 20.2939 119.548 19.1727 119.548 17.9394C119.548 15.1363 121.569 13.5667 124.263 13.5667C125.385 13.5667 126.171 13.7909 126.62 14.0151L126.171 15.4727C125.722 15.2485 125.161 15.1363 124.263 15.1363C122.691 15.1363 121.456 16.0333 121.456 17.8273C121.456 19.5091 122.579 20.5182 124.038 20.5182C124.487 20.5182 124.824 20.5182 124.936 20.406V18.6121H123.702V17.1545H126.845V21.6394V21.6394Z" fill="white"></path><path d="M130.212 13.2302H128.304V21.9757H130.212V13.2302Z" fill="white"></path><path d="M133.243 18.9485C133.243 19.9576 133.692 20.7425 134.478 20.7425C135.264 20.7425 135.713 20.0697 135.713 18.9485C135.713 18.0516 135.376 17.1546 134.478 17.1546C133.58 17.1546 133.243 18.0516 133.243 18.9485ZM137.621 18.8364C137.621 21.0788 136.049 22.0879 134.478 22.0879C132.682 22.0879 131.335 20.9667 131.335 18.9485C131.335 17.0425 132.569 15.697 134.59 15.697C136.386 15.8091 137.621 17.0425 137.621 18.8364Z" fill="white"></path><path d="M140.652 19.3969C140.652 19.509 140.652 19.6211 140.652 19.7333C140.764 20.1817 141.213 20.6302 141.774 20.6302C142.56 20.6302 143.121 20.0696 143.121 18.9484C143.121 18.0514 142.672 17.2666 141.774 17.2666C141.325 17.2666 140.764 17.603 140.652 18.1636C140.652 18.2757 140.652 18.3878 140.652 18.4999V19.3969ZM138.743 13.2302H140.652V16.706C140.988 16.1454 141.662 15.809 142.448 15.809C143.907 15.809 144.917 17.0423 144.917 18.8363C144.917 20.9666 143.57 22.0878 142.223 22.0878C141.55 22.0878 140.876 21.8636 140.427 21.0787L140.315 21.8636H138.743C138.743 21.5272 138.743 20.7423 138.743 20.0696V13.2302Z" fill="white"></path><path d="M149.295 19.1727C148.285 19.1727 147.499 19.397 147.499 20.0697C147.499 20.5182 147.836 20.7424 148.285 20.7424C148.734 20.7424 149.183 20.406 149.295 20.0697C149.295 19.9576 149.295 19.8454 149.295 19.7333V19.1727ZM151.203 20.5182C151.203 21.0788 151.203 21.6394 151.316 21.9757H149.632L149.52 21.4151C149.071 21.8636 148.509 22.2 147.836 22.2C146.601 22.2 145.927 21.303 145.927 20.4061C145.927 18.8364 147.387 18.0515 149.407 18.0515V17.9394C149.407 17.603 149.183 17.1545 148.285 17.1545C147.724 17.1545 147.05 17.3788 146.601 17.603L146.264 16.3697C146.713 16.1454 147.499 15.8091 148.622 15.8091C150.642 15.8091 151.203 17.0424 151.203 18.3879V20.5182Z" fill="white"></path><path d="M154.571 13.2302H152.663V21.9757H154.571V13.2302Z" fill="white"></path><path d="M119.885 33.0757C120.334 33.3 121.12 33.6363 122.018 33.6363C122.916 33.6363 123.365 33.3 123.365 32.7394C123.365 32.1788 122.916 31.9545 122.018 31.6182C120.671 31.1697 119.773 30.3848 119.773 29.1515C119.773 27.6939 121.008 26.6848 122.916 26.6848C123.814 26.6848 124.487 26.9091 125.049 27.1333L124.6 28.5909C124.263 28.4788 123.702 28.1424 122.916 28.1424C122.13 28.1424 121.681 28.4788 121.681 28.9272C121.681 29.4878 122.13 29.7121 123.253 30.0485C124.712 30.6091 125.385 31.3939 125.385 32.5151C125.385 33.8606 124.375 35.0939 122.018 35.0939C121.12 35.0939 120.11 34.8697 119.661 34.5333L119.885 33.0757Z" fill="white"></path><path d="M130.212 31.2819C130.212 30.8334 129.988 30.0486 129.202 30.0486C128.416 30.0486 128.079 30.7213 128.079 31.2819H130.212ZM127.967 32.5152C127.967 33.3001 128.753 33.6365 129.651 33.6365C130.324 33.6365 130.773 33.5243 131.335 33.4122L131.559 34.6455C130.998 34.8698 130.212 34.9819 129.426 34.9819C127.406 34.9819 126.171 33.7486 126.171 31.9546C126.171 30.3849 127.069 28.7031 129.202 28.7031C131.11 28.7031 131.896 30.1607 131.896 31.7304C131.896 32.0668 131.896 32.291 131.784 32.5152H127.967V32.5152Z" fill="white"></path><path d="M133.018 30.9455C133.018 30.0485 133.018 29.4879 133.018 28.9273H134.59L134.702 30.0485C135.039 29.1515 135.712 28.8152 136.274 28.8152C136.498 28.8152 136.498 28.8152 136.723 28.8152V30.6091C136.61 30.6091 136.386 30.6091 136.274 30.6091C135.6 30.6091 135.151 30.9455 135.039 31.5061C135.039 31.6182 135.039 31.7303 135.039 31.9546V34.9819H133.131V30.9455H133.018Z" fill="white"></path><path d="M139.305 28.9272L140.09 31.7303C140.203 32.2909 140.315 32.7394 140.427 33.1879C140.539 32.7394 140.652 32.2909 140.764 31.7303L141.55 28.9272H143.57L141.325 34.9818H139.417L137.172 28.9272H139.305V28.9272Z" fill="white"></path><path d="M144.468 28.9272H146.376V34.9817H144.468V28.9272ZM146.376 27.2454C146.376 27.806 146.04 28.1423 145.366 28.1423C144.805 28.1423 144.356 27.6938 144.356 27.2454C144.356 26.6848 144.805 26.3484 145.366 26.3484C146.04 26.3484 146.376 26.6848 146.376 27.2454Z" fill="white"></path><path d="M152.326 34.7576C151.989 34.8697 151.316 35.094 150.642 35.094C148.734 35.094 147.499 33.8606 147.499 32.0667C147.499 30.2728 148.734 28.8152 150.979 28.8152C151.428 28.8152 151.989 28.9273 152.438 29.0394L152.101 30.3849C151.877 30.2728 151.54 30.1606 151.091 30.1606C150.081 30.1606 149.52 30.8334 149.52 31.8425C149.52 32.9637 150.305 33.5243 151.203 33.5243C151.652 33.5243 151.989 33.4122 152.326 33.3V34.7576Z" fill="white"></path><path d="M156.928 31.2819C156.928 30.8334 156.704 30.0486 155.918 30.0486C155.132 30.0486 154.795 30.7213 154.795 31.2819H156.928ZM154.683 32.5152C154.683 33.3001 155.469 33.6365 156.367 33.6365C157.04 33.6365 157.489 33.5243 158.051 33.4122L158.275 34.6455C157.714 34.8698 156.928 34.9819 156.142 34.9819C154.122 34.9819 152.887 33.7486 152.887 31.9546C152.887 30.3849 153.785 28.7031 155.918 28.7031C157.826 28.7031 158.612 30.1607 158.612 31.7304C158.612 32.0668 158.612 32.291 158.5 32.5152H154.683V32.5152Z" fill="white"></path><path d="M159.734 33.3C160.071 33.5243 160.745 33.7485 161.306 33.7485C161.867 33.7485 162.092 33.5243 162.092 33.3C162.092 32.9637 161.867 32.8515 161.194 32.6273C159.959 32.1788 159.51 31.5061 159.51 30.8334C159.51 29.7122 160.408 28.8152 161.979 28.8152C162.653 28.8152 163.327 28.9273 163.663 29.1515L163.327 30.3849C163.102 30.2728 162.541 30.0485 161.979 30.0485C161.53 30.0485 161.306 30.2728 161.306 30.497C161.306 30.8334 161.53 30.9455 162.316 31.1697C163.439 31.5061 163.888 32.1788 163.888 32.9637C163.888 34.0849 162.99 34.8697 161.306 34.8697C160.52 34.8697 159.847 34.6455 159.398 34.4212L159.734 33.3Z" fill="white"></path><path d="M5.8371 25.7878L0 1.45752H8.41889L14.256 25.7878H5.8371Z" fill="white"></path><path d="M23.5729 5.4939L9.31689 36.5515H11.8987H16.3888H18.4093L23.5729 25.3394L28.7365 36.5515H30.4202L33.002 25.7878L23.5729 5.4939Z" fill="white"></path><path d="M38.8391 36.5515L47.1457 1.45752H38.7268L30.4202 36.5515H38.8391Z" fill="#0020F6"></path><path d="M66.5653 22.6484H71.9534V30.0484C71.2799 30.2726 69.8206 30.4969 68.1369 30.4969C61.6263 30.4969 57.0239 26.2362 57.0239 18.9484C57.0239 11.3241 62.0753 7.62412 68.6981 7.62412C72.5147 7.62412 74.872 8.29685 76.7803 9.0817L78.464 2.69079C76.7803 2.01806 73.3004 1.12109 68.6981 1.12109C57.2484 1.12109 48.7173 7.73624 48.7173 19.3969C48.7173 24.5544 50.5133 29.1514 53.6564 32.1787C56.9117 35.2059 61.514 36.8878 67.9124 36.8878C72.5147 36.8878 77.2293 35.7665 79.5866 34.8696V16.4817H66.5653V22.6484Z" fill="white"></path><path d="M100.353 15.8C95.7508 14.1182 93.8425 13.1091 93.8425 10.8667C93.8425 9.07273 95.5263 7.50303 98.8939 7.50303C102.261 7.50303 104.843 8.51212 106.19 9.18485L107.986 2.79394C105.854 1.78485 103.047 1 99.0061 1C90.8117 1 85.7604 5.48485 85.7604 11.5394C85.7604 16.5848 89.577 19.8364 95.4141 21.9667C99.6796 23.4242 101.251 24.6576 101.251 26.9C101.251 29.1424 99.3429 30.7121 95.6386 30.7121C92.271 30.7121 88.9035 29.5909 86.8829 28.4697L85.3114 34.9727C87.3319 36.0939 91.2608 37.103 95.3018 37.103C104.955 37.103 109.446 32.0576 109.446 26.2273C109.446 21.2939 106.527 18.1545 100.353 15.8Z" fill="white"></path></g><defs><clipPath id="clip0_804_6347"><rect width="164" height="37" fill="white"></rect></clipPath></defs></svg>				</a>
+			</div>
+						<div class="elementor-icon-box-content">
+				<h3 class="elementor-icon-box-title">
+					<a href="https://wgs.co.id/" >
+						Copyright © 2006 - 2023 PT Kirana Tama Teknologi, a division of ​					</a>
+				</h3>
+							</div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+							</div>
+				</div>
+		</div>
+
+
+		<script>
+			window.RS_MODULES = window.RS_MODULES || {};
+			window.RS_MODULES.modules = window.RS_MODULES.modules || {};
+			window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
+			window.RS_MODULES.defered = true;
+			window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
+			window.RS_MODULES.type = 'compiled';
+		</script>
+		<script id="generate-a11y">!function(){"use strict";if("querySelector"in document&&"addEventListener"in window){var e=document.body;e.addEventListener("mousedown",function(){e.classList.add("using-mouse")}),e.addEventListener("keydown",function(){e.classList.remove("using-mouse")})}}();</script>					<script type="text/x-template" id="mobile-menu-item-template"><li
+	:id="'jet-mobile-menu-item-'+itemDataObject.itemId"
+	:class="itemClasses"
+>
+	<div
+		class="jet-mobile-menu__item-inner"
+		tabindex="1"
+		:aria-label="itemDataObject.name"
+        aria-expanded="false"
+		v-on:click="itemSubHandler"
+		v-on:keyup.enter="itemSubHandler"
+	>
+		<a
+			:class="itemLinkClasses"
+			:href="itemDataObject.url"
+			:rel="itemDataObject.xfn"
+			:title="itemDataObject.attrTitle"
+			:target="itemDataObject.target"
+		>
+			<div class="jet-menu-item-wrapper">
+				<div
+					class="jet-menu-icon"
+					v-if="isIconVisible"
+					v-html="itemIconHtml"
+				></div>
+				<div class="jet-menu-name">
+					<span
+						class="jet-menu-label"
+						v-html="itemDataObject.name"
+					></span>
+					<small
+						class="jet-menu-desc"
+						v-if="isDescVisible"
+						v-html="itemDataObject.description"
+					></small>
+				</div>
+				<div
+					class="jet-menu-badge"
+					v-if="isBadgeVisible"
+				>
+					<div class="jet-menu-badge__inner" v-html="itemDataObject.badgeContent"></div>
+				</div>
+			</div>
+		</a>
+		<span
+			class="jet-dropdown-arrow"
+			v-if="isSub && !templateLoadStatus"
+			v-html="dropdownIconHtml"
+			v-on:click="markerSubHandler"
+		>
+		</span>
+		<div
+			class="jet-mobile-menu__template-loader"
+			v-if="templateLoadStatus"
+		>
+			<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="24px" height="25px" viewBox="0 0 128 128" xml:space="preserve">
+				<g>
+					<linearGradient id="linear-gradient">
+						<stop offset="0%" :stop-color="loaderColor" stop-opacity="0"/>
+						<stop offset="100%" :stop-color="loaderColor" stop-opacity="1"/>
+					</linearGradient>
+				<path d="M63.85 0A63.85 63.85 0 1 1 0 63.85 63.85 63.85 0 0 1 63.85 0zm.65 19.5a44 44 0 1 1-44 44 44 44 0 0 1 44-44z" fill="url(#linear-gradient)" fill-rule="evenodd"/>
+				<animateTransform attributeName="transform" type="rotate" from="0 64 64" to="360 64 64" dur="1080ms" repeatCount="indefinite"></animateTransform>
+				</g>
+			</svg>
+		</div>
+	</div>
+
+	<transition name="menu-container-expand-animation">
+		<mobile-menu-list
+			v-if="isDropdownLayout && subDropdownVisible"
+			:depth="depth+1"
+			:children-object="itemDataObject.children"
+		></mobile-menu-list>
+	</transition>
+
+</li>
+					</script>					<script type="text/x-template" id="mobile-menu-list-template"><div
+	class="jet-mobile-menu__list"
+	role="navigation"
+>
+	<ul class="jet-mobile-menu__items">
+		<mobile-menu-item
+			v-for="(item, index) in childrenObject"
+			:key="item.id"
+			:item-data-object="item"
+			:depth="depth"
+		></mobile-menu-item>
+	</ul>
+</div>
+					</script>					<script type="text/x-template" id="mobile-menu-template"><div
+	:class="instanceClass"
+	v-on:keyup.esc="escapeKeyHandler"
+>
+	<div
+		class="jet-mobile-menu__toggle"
+		ref="toggle"
+		tabindex="1"
+		aria-label="Open/Close Menu"
+        aria-expanded="false"
+		v-on:click="menuToggle"
+		v-on:keyup.enter="menuToggle"
+	>
+		<div
+			class="jet-mobile-menu__template-loader"
+			v-if="toggleLoaderVisible"
+		>
+			<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="24px" height="25px" viewBox="0 0 128 128" xml:space="preserve">
+				<g>
+					<linearGradient id="linear-gradient">
+						<stop offset="0%" :stop-color="loaderColor" stop-opacity="0"/>
+						<stop offset="100%" :stop-color="loaderColor" stop-opacity="1"/>
+					</linearGradient>
+				<path d="M63.85 0A63.85 63.85 0 1 1 0 63.85 63.85 63.85 0 0 1 63.85 0zm.65 19.5a44 44 0 1 1-44 44 44 44 0 0 1 44-44z" fill="url(#linear-gradient)" fill-rule="evenodd"/>
+				<animateTransform attributeName="transform" type="rotate" from="0 64 64" to="360 64 64" dur="1080ms" repeatCount="indefinite"></animateTransform>
+				</g>
+			</svg>
+		</div>
+
+		<div
+			class="jet-mobile-menu__toggle-icon"
+			v-if="!menuOpen && !toggleLoaderVisible"
+			v-html="toggleClosedIcon"
+		></div>
+		<div
+			class="jet-mobile-menu__toggle-icon"
+			v-if="menuOpen && !toggleLoaderVisible"
+			v-html="toggleOpenedIcon"
+		></div>
+		<span
+			class="jet-mobile-menu__toggle-text"
+			v-if="toggleText"
+			v-html="toggleText"
+		></span>
+
+	</div>
+
+	<transition name="cover-animation">
+		<div
+			class="jet-mobile-menu-cover"
+			v-if="menuContainerVisible && coverVisible"
+			v-on:click="closeMenu"
+		></div>
+	</transition>
+
+	<transition :name="showAnimation">
+		<div
+			class="jet-mobile-menu__container"
+			v-if="menuContainerVisible"
+		>
+			<div
+				class="jet-mobile-menu__container-inner"
+			>
+				<div
+					class="jet-mobile-menu__header-template"
+					v-if="headerTemplateVisible"
+				>
+					<div
+						class="jet-mobile-menu__header-template-content"
+						ref="header-template-content"
+						v-html="headerContent"
+					></div>
+				</div>
+
+				<div
+					class="jet-mobile-menu__controls"
+				>
+					<div
+						class="jet-mobile-menu__breadcrumbs"
+						v-if="isBreadcrumbs"
+					>
+						<div
+							class="jet-mobile-menu__breadcrumb"
+							v-for="(item, index) in breadcrumbsPathData"
+							:key="index"
+						>
+							<div
+								class="breadcrumb-label"
+								v-on:click="breadcrumbHandle(index+1)"
+								v-html="item"
+							></div>
+							<div
+								class="breadcrumb-divider"
+								v-html="breadcrumbIcon"
+								v-if="(breadcrumbIcon && index !== breadcrumbsPathData.length-1)"
+							></div>
+						</div>
+					</div>
+					<div
+						class="jet-mobile-menu__back"
+						ref="back"
+						tabindex="1"
+						aria-label="Close Menu"
+                        aria-expanded="false"
+						v-if="!isBack && isClose"
+						v-html="closeIcon"
+						v-on:click="menuToggle"
+						v-on:keyup.enter="menuToggle"
+					></div>
+					<div
+						class="jet-mobile-menu__back"
+						ref="back"
+						tabindex="1"
+						aria-label="Back to Prev Items"
+                        aria-expanded="false"
+						v-if="isBack"
+						v-html="backIcon"
+						v-on:click="goBack"
+						v-on:keyup.enter="goBack"
+					></div>
+				</div>
+
+				<div
+					class="jet-mobile-menu__before-template"
+					v-if="beforeTemplateVisible"
+				>
+					<div
+						class="jet-mobile-menu__before-template-content"
+						ref="before-template-content"
+						v-html="beforeContent"
+					></div>
+				</div>
+
+				<div
+					class="jet-mobile-menu__body"
+				>
+					<transition :name="animation">
+						<mobile-menu-list
+							v-if="!templateVisible"
+							:key="depth"
+							:depth="depth"
+							:children-object="itemsList"
+						></mobile-menu-list>
+						<div
+							class="jet-mobile-menu__template"
+							ref="template-content"
+							v-if="templateVisible"
+						>
+							<div
+								class="jet-mobile-menu__template-content"
+								v-html="itemTemplateContent"
+							></div>
+						</div>
+					</transition>
+				</div>
+
+				<div
+					class="jet-mobile-menu__after-template"
+					v-if="afterTemplateVisible"
+				>
+					<div
+						class="jet-mobile-menu__after-template-content"
+						ref="after-template-content"
+						v-html="afterContent"
+					></div>
+				</div>
+
+			</div>
+		</div>
+	</transition>
+</div>
+					</script><link rel='stylesheet' id='elementor-post-8496-css' href='https://www.emveep.com/wp-content/uploads/elementor/css/post-8496.css?ver=1687320906' media='all' />
+<link rel='stylesheet' id='ep-advanced-button-css' href='https://www.emveep.com/wp-content/plugins/bdthemes-element-pack/assets/css/ep-advanced-button.css?ver=6.13.0' media='all' />
+<link rel='stylesheet' id='e-animations-css' href='https://www.emveep.com/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.13.4' media='all' />
+<link rel='stylesheet' id='rs-plugin-settings-css' href='https://www.emveep.com/wp-content/plugins/revslider/public/assets/css/rs6.css?ver=6.6.13' media='all' />
+<style id='rs-plugin-settings-inline-css'>
+#rs-demo-id {}
+</style>
+<script src='https://www.emveep.com/wp-content/plugins/structured-content/dist/app.build.js?ver=1.5.3' id='structured-content-frontend-js'></script>
+<script src='https://www.emveep.com/wp-content/plugins/jet-menu/integration/themes/generatepress/assets/js/script.js?ver=2.4.0' id='jet-menu-generatepress-js'></script>
+<script id='eio-lazy-load-js-before'>
+var eio_lazy_vars = {"exactdn_domain":"","skip_autoscale":0,"threshold":0};
+</script>
+<script src='https://www.emveep.com/wp-content/plugins/ewww-image-optimizer/includes/lazysizes.min.js?ver=702' id='eio-lazy-load-js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js?ver=1.2.59.0' id='mo-google-webfont-js'></script>
+<script id='mailoptin-js-extra'>
+var mailoptin_globals = {"public_js":"https:\/\/www.emveep.com\/wp-content\/plugins\/mailoptin\/src\/core\/src\/assets\/js\/src","public_sound":"https:\/\/www.emveep.com\/wp-content\/plugins\/mailoptin\/src\/core\/src\/assets\/sound\/","mailoptin_ajaxurl":"\/blog\/ruby-on-rails-vs-python-for-web-development?mailoptin-ajax=%%endpoint%%","is_customize_preview":"false","disable_impression_tracking":"false","sidebar":"0","js_required_title":"Title is required.","is_new_returning_visitors_cookies":"false"};
+</script>
+<script src='https://www.emveep.com/wp-content/plugins/mailoptin/src/core/src/assets/js/mailoptin.min.js?ver=1.2.59.0' id='mailoptin-js'></script>
+<script src='https://www.emveep.com/wp-content/plugins/revslider/public/assets/js/rbtools.min.js?ver=6.6.13' defer async id='tp-tools-js'></script>
+<script src='https://www.emveep.com/wp-content/plugins/revslider/public/assets/js/rs6.min.js?ver=6.6.13' defer async id='revmin-js'></script>
+<script id='rocket-browser-checker-js-after'>
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script id='rocket-preload-links-js-extra'>
+var RocketPreloadLinksConfig = {"excludeUris":"\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index\\.php\/)?(.*)wp\\-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/www.emveep.com","onHoverDelay":"100","rateThrottle":"3"};
+</script>
+<script id='rocket-preload-links-js-after'>
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<!--[if lte IE 11]>
+<script src='https://www.emveep.com/wp-content/themes/generatepress/assets/js/classList.min.js?ver=3.3.0' id='generate-classlist-js'></script>
+<![endif]-->
+<script id='generate-menu-js-extra'>
+var generatepressMenu = {"toggleOpenedSubMenus":"1","openSubMenuLabel":"Open Sub-Menu","closeSubMenuLabel":"Close Sub-Menu"};
+</script>
+<script src='https://www.emveep.com/wp-content/themes/generatepress/assets/js/menu.min.js?ver=3.3.0' id='generate-menu-js'></script>
+<script src='https://www.emveep.com/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2' id='wp-polyfill-inert-js'></script>
+<script src='https://www.emveep.com/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.11' id='regenerator-runtime-js'></script>
+<script src='https://www.emveep.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0' id='wp-polyfill-js'></script>
+<script src='https://www.emveep.com/wp-includes/js/dist/hooks.min.js?ver=4169d3cf8e8d95a3d6d5' id='wp-hooks-js'></script>
+<script src='https://www.emveep.com/wp-content/plugins/jet-menu/assets/public/lib/vue/vue.min.js?ver=2.6.11' id='jet-vue-js'></script>
+<script id='jet-menu-public-scripts-js-extra'>
+var jetMenuPublicSettings = {"version":"2.4.0","ajaxUrl":"https:\/\/www.emveep.com\/wp-admin\/admin-ajax.php","isMobile":"false","getElementorTemplateApiUrl":"https:\/\/www.emveep.com\/wp-json\/jet-menu-api\/v2\/get-elementor-template-content","getBlocksTemplateApiUrl":"https:\/\/www.emveep.com\/wp-json\/jet-menu-api\/v2\/get-blocks-template-content","menuItemsApiUrl":"https:\/\/www.emveep.com\/wp-json\/jet-menu-api\/v2\/get-menu-items","restNonce":"349323fd7e","devMode":"false","wpmlLanguageCode":"","menuSettings":{"jetMenuRollUp":"true","jetMenuMouseleaveDelay":500,"jetMenuMegaWidthType":"container","jetMenuMegaWidthSelector":"","jetMenuMegaOpenSubType":"hover","jetMenuMegaAjax":"false"}};
+var CxCollectedCSS = {"type":"text\/css","title":"cx-collected-dynamic-style","css":".jet-mobile-menu-single .jet-menu-icon {-webkit-align-self:center; align-self:center; }.jet-mobile-menu-single .jet-menu-badge {-webkit-align-self:center; align-self:center; }"};
+</script>
+<script src='https://www.emveep.com/wp-content/plugins/jet-menu/assets/public/js/legacy/jet-menu-public-scripts.js?ver=2.4.0' id='jet-menu-public-scripts-js'></script>
+<script id='jet-menu-public-scripts-js-after'>
+function CxCSSCollector(){"use strict";var t,e=window.CxCollectedCSS;void 0!==e&&((t=document.createElement("style")).setAttribute("title",e.title),t.setAttribute("type",e.type),t.textContent=e.css,document.head.appendChild(t))}CxCSSCollector();
+</script>
+<script id='happy-elementor-addons-js-extra'>
+var HappyLocalize = {"ajax_url":"https:\/\/www.emveep.com\/wp-admin\/admin-ajax.php","nonce":"634bf6dca7","pdf_js_lib":"https:\/\/www.emveep.com\/wp-content\/plugins\/happy-elementor-addons\/assets\/vendor\/pdfjs\/lib"};
+</script>
+<script src='https://www.emveep.com/wp-content/plugins/happy-elementor-addons/assets/js/happy-addons.min.js?ver=3.8.4' id='happy-elementor-addons-js'></script>
+<script src='https://www.emveep.com/wp-content/plugins/elementskit-lite/libs/framework/assets/js/frontend-script.js?ver=2.8.8' id='elementskit-framework-js-frontend-js'></script>
+<script id='elementskit-framework-js-frontend-js-after'>
+		var elementskit = {
+			resturl: 'https://www.emveep.com/wp-json/elementskit/v1/',
+		}
+
+		
+</script>
+<script src='https://www.emveep.com/wp-content/plugins/elementskit-lite/widgets/init/assets/js/widget-scripts.js?ver=2.8.8' id='ekit-widget-scripts-js'></script>
+<script id='eael-general-js-extra'>
+var localize = {"ajaxurl":"https:\/\/www.emveep.com\/wp-admin\/admin-ajax.php","nonce":"de5214fd2f","i18n":{"added":"Added ","compare":"Compare","loading":"Loading..."},"eael_translate_text":{"required_text":"is a required field","invalid_text":"Invalid","billing_text":"Billing","shipping_text":"Shipping","fg_mfp_counter_text":"of"},"page_permalink":"https:\/\/www.emveep.com\/404-error\/","cart_redirectition":"","cart_page_url":"","el_breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}};
+</script>
+<script src='https://www.emveep.com/wp-content/plugins/essential-addons-for-elementor-lite/assets/front-end/js/view/general.min.js?ver=5.7.4' id='eael-general-js'></script>
+<script src='https://www.emveep.com/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2' id='elementor-waypoints-js'></script>
+<script src='https://www.emveep.com/wp-content/plugins/premium-addons-for-elementor/assets/frontend/min-js/lottie.min.js?ver=4.9.57' id='lottie-js-js'></script>
+<script id='premium-addons-js-extra'>
+var PremiumSettings = {"ajaxurl":"https:\/\/www.emveep.com\/wp-admin\/admin-ajax.php","nonce":"89c80f3c37"};
+</script>
+<script src='https://www.emveep.com/wp-content/plugins/premium-addons-for-elementor/assets/frontend/min-js/premium-addons.min.js?ver=4.9.57' id='premium-addons-js'></script>
+<script id='bdt-uikit-js-extra'>
+var element_pack_ajax_login_config = {"ajaxurl":"https:\/\/www.emveep.com\/wp-admin\/admin-ajax.php","language":"en","loadingmessage":"Sending user info, please wait...","unknownerror":"Unknown error, make sure access is correct!"};
+var ElementPackConfig = {"ajaxurl":"https:\/\/www.emveep.com\/wp-admin\/admin-ajax.php","nonce":"6a89fa5de3","data_table":{"language":{"lengthMenu":"Show _MENU_ Entries","info":"Showing _START_ to _END_ of _TOTAL_ entries","search":"Search :","sZeroRecords":"No matching records found","paginate":{"previous":"Previous","next":"Next"}}},"contact_form":{"sending_msg":"Sending message please wait...","captcha_nd":"Invisible captcha not defined!","captcha_nr":"Could not get invisible captcha response!"},"mailchimp":{"subscribing":"Subscribing you please wait..."},"search":{"more_result":"More Results","search_result":"SEARCH RESULT","not_found":"not found"},"elements_data":{"sections":[],"columns":[],"widgets":[]}};
+</script>
+<script src='https://www.emveep.com/wp-content/plugins/bdthemes-element-pack/assets/js/bdt-uikit.min.js?ver=3.15.1' id='bdt-uikit-js'></script>
+<script src='https://www.emveep.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.13.4' id='elementor-webpack-runtime-js'></script>
+<script src='https://www.emveep.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.13.4' id='elementor-frontend-modules-js'></script>
+<script src='https://www.emveep.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2' id='jquery-ui-core-js'></script>
+<script src='https://www.emveep.com/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6' id='swiper-js'></script>
+<script src='https://www.emveep.com/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=3.13.4' id='share-link-js'></script>
+<script src='https://www.emveep.com/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.9.0' id='elementor-dialog-js'></script>
+<script id='elementor-frontend-js-before'>
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.13.4","is_static":false,"experimentalFeatures":{"a11y_improvements":true,"additional_custom_breakpoints":true,"theme_builder_v2":true,"landing-pages":true,"page-transitions":true,"notes":true,"loop":true,"form-submissions":true,"e_scroll_snap":true},"urls":{"assets":"https:\/\/www.emveep.com\/wp-content\/plugins\/elementor\/assets\/"},"swiperClass":"swiper-container","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":8344,"title":"Page%20not%20found%20%7C%20Emveep","excerpt":"","featuredImage":false}};
+</script>
+<script src='https://www.emveep.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.13.4' id='elementor-frontend-js'></script>
+<script src='https://www.emveep.com/wp-content/plugins/bdthemes-element-pack/assets/js/modules/ep-section-sticky.min.js?ver=6.13.0' id='ep-section-sticky-js'></script>
+<script src='https://www.emveep.com/wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js?ver=1.0.1' id='smartmenus-js'></script>
+<script src='https://www.emveep.com/wp-content/plugins/bdthemes-element-pack/assets/js/common/helper.min.js?ver=6.13.0' id='element-pack-helper-js'></script>
+<script src='https://www.emveep.com/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.13.2' id='elementor-pro-webpack-runtime-js'></script>
+<script src='https://www.emveep.com/wp-includes/js/dist/i18n.min.js?ver=9e794f35a71bb98672ae' id='wp-i18n-js'></script>
+<script id='wp-i18n-js-after'>
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script id='elementor-pro-frontend-js-before'>
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/www.emveep.com\/wp-admin\/admin-ajax.php","nonce":"cc6dd1635f","urls":{"assets":"https:\/\/www.emveep.com\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/www.emveep.com\/wp-json\/"},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/www.emveep.com\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+</script>
+<script src='https://www.emveep.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.13.2' id='elementor-pro-frontend-js'></script>
+<script src='https://www.emveep.com/wp-content/plugins/elementor-pro/assets/js/preloaded-elements-handlers.min.js?ver=3.13.2' id='pro-preloaded-elements-handlers-js'></script>
+<script src='https://www.emveep.com/wp-content/plugins/jet-menu/includes/elementor/assets/public/js/legacy/widgets-scripts.js?ver=2.4.0' id='jet-menu-elementor-widgets-scripts-js'></script>
+<script src='https://www.emveep.com/wp-content/plugins/elementskit-lite/widgets/init/assets/js/animate-circle.js?ver=2.8.8' id='animate-circle-js'></script>
+<script id='elementskit-elementor-js-extra'>
+var ekit_config = {"ajaxurl":"https:\/\/www.emveep.com\/wp-admin\/admin-ajax.php","nonce":"5d6e63be14"};
+</script>
+<script src='https://www.emveep.com/wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor.js?ver=2.8.8' id='elementskit-elementor-js'></script>
+<script src='https://www.emveep.com/wp-content/plugins/elementor/assets/js/preloaded-modules.min.js?ver=3.13.4' id='preloaded-modules-js'></script>
+<script src='https://www.emveep.com/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=3.13.2' id='e-sticky-js'></script>
+<script>window.lazyLoadOptions = {
+                elements_selector: "img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",
+                data_src: "lazy-src",
+                data_srcset: "lazy-srcset",
+                data_sizes: "lazy-sizes",
+                class_loading: "lazyloading",
+                class_loaded: "lazyloaded",
+                threshold: 300,
+                callback_loaded: function(element) {
+                    if ( element.tagName === "IFRAME" && element.dataset.rocketLazyload == "fitvidscompatible" ) {
+                        if (element.classList.contains("lazyloaded") ) {
+                            if (typeof window.jQuery != "undefined") {
+                                if (jQuery.fn.fitVids) {
+                                    jQuery(element).parent().fitVids();
+                                }
+                            }
+                        }
+                    }
+                }};
+        window.addEventListener('LazyLoad::Initialized', function (e) {
+            var lazyLoadInstance = e.detail.instance;
+
+            if (window.MutationObserver) {
+                var observer = new MutationObserver(function(mutations) {
+                    var image_count = 0;
+                    var iframe_count = 0;
+                    var rocketlazy_count = 0;
+
+                    mutations.forEach(function(mutation) {
+                        for (i = 0; i < mutation.addedNodes.length; i++) {
+                            if (typeof mutation.addedNodes[i].getElementsByTagName !== 'function') {
+                                return;
+                            }
+
+                           if (typeof mutation.addedNodes[i].getElementsByClassName !== 'function') {
+                                return;
+                            }
+
+                            images = mutation.addedNodes[i].getElementsByTagName('img');
+                            is_image = mutation.addedNodes[i].tagName == "IMG";
+                            iframes = mutation.addedNodes[i].getElementsByTagName('iframe');
+                            is_iframe = mutation.addedNodes[i].tagName == "IFRAME";
+                            rocket_lazy = mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');
+
+                            image_count += images.length;
+			                iframe_count += iframes.length;
+			                rocketlazy_count += rocket_lazy.length;
+
+                            if(is_image){
+                                image_count += 1;
+                            }
+
+                            if(is_iframe){
+                                iframe_count += 1;
+                            }
+                        }
+                    } );
+
+                    if(image_count > 0 || iframe_count > 0 || rocketlazy_count > 0){
+                        lazyLoadInstance.update();
+                    }
+                } );
+
+                var b      = document.getElementsByTagName("body")[0];
+                var config = { childList: true, subtree: true };
+
+                observer.observe(b, config);
+            }
+        }, false);</script><script data-no-minify="1" async src="https://www.emveep.com/wp-content/plugins/rocket-lazy-load/assets/js/16.1/lazyload.min.js"></script><script>function lazyLoadThumb(e){var t='<img loading="lazy" data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img  alt="" width="480" height="360" data-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></noscript>',a='<div class="play"></div>';return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.dataset.query.length?'':'&'+this.dataset.query;e.setAttribute("src",t.replace("ID",this.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.replaceChild(e,this)}document.addEventListener("DOMContentLoaded",function(){var e,t,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query", a[t].dataset.query),e.setAttribute("data-src", a[t].dataset.src),e.innerHTML=lazyLoadThumb(a[t].dataset.id),e.onclick=lazyLoadYoutubeIframe,a[t].appendChild(e)});</script><script type='text/javascript'>
+document.tidioChatCode = "bgzmr9s7lvnrbqdanfqwpyebxk5aobdh";
+(function() {
+  function asyncLoad() {
+    var tidioScript = document.createElement("script");
+    tidioScript.type = "text/javascript";
+    tidioScript.async = true;
+    tidioScript.src = "//code.tidio.co/bgzmr9s7lvnrbqdanfqwpyebxk5aobdh.js";
+    document.body.appendChild(tidioScript);
+  }
+  if (window.attachEvent) {
+    window.attachEvent("onload", asyncLoad);
+  } else {
+    window.addEventListener("load", asyncLoad, false);
+  }
+})();
+</script>
+</body>
+</html>
