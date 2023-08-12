@@ -4,6 +4,12 @@ module BookingSystem
   class RoomBooking
     include Observable
 
+    cattr_accessor :default_observers
+
+    def initialize
+      @observers = self.class.default_observers || []
+    end
+
     def update_price
       changed
       notify_observers(:price_updated)
